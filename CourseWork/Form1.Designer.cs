@@ -36,11 +36,11 @@
             this.devices_listView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.bluetoothDevice_button = new System.Windows.Forms.Button();
+            this.mobileDevices_button = new System.Windows.Forms.Button();
+            this.radioDevices_button = new System.Windows.Forms.Button();
+            this.satelliteDevices_button = new System.Windows.Forms.Button();
+            this.wifiDevices_button = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,23 +48,33 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.search_button = new System.Windows.Forms.Button();
+            this.communicationTypes_checkedListBox = new System.Windows.Forms.CheckedListBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.workingHoursMin_textBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dataTranmissionRangeMin_textBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.priceMax_textBox = new System.Windows.Forms.TextBox();
+            this.priceMin_textBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.weight_textBox = new System.Windows.Forms.TextBox();
+            this.weightMin_textBox = new System.Windows.Forms.TextBox();
             this.model_textBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.brand_textBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.minPrice_textBox = new System.Windows.Forms.TextBox();
-            this.maxPrice_textBox = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dataTranmissionRange_textBox = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.workingHours_textBox = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.communicationTypes_checkedListBox = new System.Windows.Forms.CheckedListBox();
+            this.workingHoursMax_textBox = new System.Windows.Forms.TextBox();
+            this.dataTranmissionRangeMax_textBox = new System.Windows.Forms.TextBox();
+            this.weightMax_textBox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +84,7 @@
             this.add_button.BackColor = System.Drawing.SystemColors.Control;
             this.add_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_button.BackgroundImage")));
             this.add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.add_button.Cursor = System.Windows.Forms.Cursors.Default;
+            this.add_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.add_button.FlatAppearance.BorderSize = 0;
             this.add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_button.Location = new System.Drawing.Point(706, 599);
@@ -89,6 +99,7 @@
             this.edit_button.BackColor = System.Drawing.SystemColors.Control;
             this.edit_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("edit_button.BackgroundImage")));
             this.edit_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.edit_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.edit_button.FlatAppearance.BorderSize = 0;
             this.edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.edit_button.Location = new System.Drawing.Point(777, 599);
@@ -103,6 +114,7 @@
             this.delete_button.BackColor = System.Drawing.SystemColors.Control;
             this.delete_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("delete_button.BackgroundImage")));
             this.delete_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delete_button.FlatAppearance.BorderSize = 0;
             this.delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_button.Location = new System.Drawing.Point(851, 599);
@@ -149,55 +161,60 @@
             this.columnHeader2.Text = "Device";
             this.columnHeader2.Width = 320;
             // 
-            // button1
+            // bluetoothDevice_button
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(351, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 54);
-            this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = true;
+            this.bluetoothDevice_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bluetoothDevice_button.BackgroundImage")));
+            this.bluetoothDevice_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bluetoothDevice_button.Location = new System.Drawing.Point(351, 44);
+            this.bluetoothDevice_button.Name = "bluetoothDevice_button";
+            this.bluetoothDevice_button.Size = new System.Drawing.Size(70, 54);
+            this.bluetoothDevice_button.TabIndex = 6;
+            this.bluetoothDevice_button.UseVisualStyleBackColor = true;
+            this.bluetoothDevice_button.Click += new System.EventHandler(this.bluetoothDevice_button_Click);
             // 
-            // button2
+            // mobileDevices_button
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(466, 44);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 54);
-            this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = true;
+            this.mobileDevices_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mobileDevices_button.BackgroundImage")));
+            this.mobileDevices_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.mobileDevices_button.Location = new System.Drawing.Point(466, 44);
+            this.mobileDevices_button.Name = "mobileDevices_button";
+            this.mobileDevices_button.Size = new System.Drawing.Size(70, 54);
+            this.mobileDevices_button.TabIndex = 7;
+            this.mobileDevices_button.UseVisualStyleBackColor = true;
+            this.mobileDevices_button.Click += new System.EventHandler(this.mobileDevices_button_Click);
             // 
-            // button3
+            // radioDevices_button
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(583, 44);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 54);
-            this.button3.TabIndex = 8;
-            this.button3.UseVisualStyleBackColor = true;
+            this.radioDevices_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("radioDevices_button.BackgroundImage")));
+            this.radioDevices_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.radioDevices_button.Location = new System.Drawing.Point(583, 44);
+            this.radioDevices_button.Name = "radioDevices_button";
+            this.radioDevices_button.Size = new System.Drawing.Size(70, 54);
+            this.radioDevices_button.TabIndex = 8;
+            this.radioDevices_button.UseVisualStyleBackColor = true;
+            this.radioDevices_button.Click += new System.EventHandler(this.radioDevices_button_Click);
             // 
-            // button4
+            // satelliteDevices_button
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Location = new System.Drawing.Point(706, 44);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 54);
-            this.button4.TabIndex = 9;
-            this.button4.UseVisualStyleBackColor = true;
+            this.satelliteDevices_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("satelliteDevices_button.BackgroundImage")));
+            this.satelliteDevices_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.satelliteDevices_button.Location = new System.Drawing.Point(706, 44);
+            this.satelliteDevices_button.Name = "satelliteDevices_button";
+            this.satelliteDevices_button.Size = new System.Drawing.Size(70, 54);
+            this.satelliteDevices_button.TabIndex = 9;
+            this.satelliteDevices_button.UseVisualStyleBackColor = true;
+            this.satelliteDevices_button.Click += new System.EventHandler(this.satelliteDevices_button_Click);
             // 
-            // button5
+            // wifiDevices_button
             // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Location = new System.Drawing.Point(831, 44);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(70, 54);
-            this.button5.TabIndex = 10;
-            this.button5.UseVisualStyleBackColor = true;
+            this.wifiDevices_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wifiDevices_button.BackgroundImage")));
+            this.wifiDevices_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.wifiDevices_button.Location = new System.Drawing.Point(831, 44);
+            this.wifiDevices_button.Name = "wifiDevices_button";
+            this.wifiDevices_button.Size = new System.Drawing.Size(70, 54);
+            this.wifiDevices_button.TabIndex = 10;
+            this.wifiDevices_button.UseVisualStyleBackColor = true;
+            this.wifiDevices_button.Click += new System.EventHandler(this.wifiDevices_button_Click);
             // 
             // label2
             // 
@@ -257,19 +274,29 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.label21);
+            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.weightMax_textBox);
+            this.groupBox1.Controls.Add(this.dataTranmissionRangeMax_textBox);
+            this.groupBox1.Controls.Add(this.workingHoursMax_textBox);
+            this.groupBox1.Controls.Add(this.search_button);
             this.groupBox1.Controls.Add(this.communicationTypes_checkedListBox);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.workingHours_textBox);
+            this.groupBox1.Controls.Add(this.workingHoursMin_textBox);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.dataTranmissionRange_textBox);
+            this.groupBox1.Controls.Add(this.dataTranmissionRangeMin_textBox);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.maxPrice_textBox);
-            this.groupBox1.Controls.Add(this.minPrice_textBox);
+            this.groupBox1.Controls.Add(this.priceMax_textBox);
+            this.groupBox1.Controls.Add(this.priceMin_textBox);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.weight_textBox);
+            this.groupBox1.Controls.Add(this.weightMin_textBox);
             this.groupBox1.Controls.Add(this.model_textBox);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -277,155 +304,24 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(19, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 629);
+            this.groupBox1.Size = new System.Drawing.Size(282, 637);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
-            // label10
+            // search_button
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(31, 554);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(151, 17);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Сортування за вагою:";
-            // 
-            // weight_textBox
-            // 
-            this.weight_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.weight_textBox.Location = new System.Drawing.Point(30, 587);
-            this.weight_textBox.Name = "weight_textBox";
-            this.weight_textBox.Size = new System.Drawing.Size(208, 23);
-            this.weight_textBox.TabIndex = 4;
-            // 
-            // model_textBox
-            // 
-            this.model_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.model_textBox.Location = new System.Drawing.Point(30, 123);
-            this.model_textBox.Name = "model_textBox";
-            this.model_textBox.Size = new System.Drawing.Size(208, 23);
-            this.model_textBox.TabIndex = 3;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(31, 94);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 17);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Модель:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(30, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 17);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Бренд:";
-            // 
-            // brand_textBox
-            // 
-            this.brand_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.brand_textBox.Location = new System.Drawing.Point(30, 48);
-            this.brand_textBox.Name = "brand_textBox";
-            this.brand_textBox.Size = new System.Drawing.Size(208, 23);
-            this.brand_textBox.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(30, 471);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 17);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Ціна:";
-            // 
-            // minPrice_textBox
-            // 
-            this.minPrice_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.minPrice_textBox.Location = new System.Drawing.Point(33, 515);
-            this.minPrice_textBox.Name = "minPrice_textBox";
-            this.minPrice_textBox.Size = new System.Drawing.Size(78, 23);
-            this.minPrice_textBox.TabIndex = 7;
-            // 
-            // maxPrice_textBox
-            // 
-            this.maxPrice_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maxPrice_textBox.Location = new System.Drawing.Point(160, 515);
-            this.maxPrice_textBox.Name = "maxPrice_textBox";
-            this.maxPrice_textBox.Size = new System.Drawing.Size(78, 23);
-            this.maxPrice_textBox.TabIndex = 8;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(31, 499);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(25, 13);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Від:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(157, 499);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(25, 13);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "До:";
-            // 
-            // dataTranmissionRange_textBox
-            // 
-            this.dataTranmissionRange_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataTranmissionRange_textBox.Location = new System.Drawing.Point(30, 213);
-            this.dataTranmissionRange_textBox.Name = "dataTranmissionRange_textBox";
-            this.dataTranmissionRange_textBox.Size = new System.Drawing.Size(208, 23);
-            this.dataTranmissionRange_textBox.TabIndex = 11;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(30, 174);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(148, 17);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "Дальність роботи(м):";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(31, 258);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(174, 17);
-            this.label15.TabIndex = 13;
-            this.label15.Text = "Поточний час роботи(м):";
-            // 
-            // workingHours_textBox
-            // 
-            this.workingHours_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.workingHours_textBox.Location = new System.Drawing.Point(30, 292);
-            this.workingHours_textBox.Name = "workingHours_textBox";
-            this.workingHours_textBox.Size = new System.Drawing.Size(208, 23);
-            this.workingHours_textBox.TabIndex = 14;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(30, 338);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(112, 17);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "Тип комунікації:";
+            this.search_button.BackColor = System.Drawing.Color.White;
+            this.search_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("search_button.BackgroundImage")));
+            this.search_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.search_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.search_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.search_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.search_button.Location = new System.Drawing.Point(246, 7);
+            this.search_button.Name = "search_button";
+            this.search_button.Size = new System.Drawing.Size(30, 26);
+            this.search_button.TabIndex = 17;
+            this.search_button.UseVisualStyleBackColor = false;
+            this.search_button.Click += new System.EventHandler(this.search_button_Click);
             // 
             // communicationTypes_checkedListBox
             // 
@@ -436,10 +332,240 @@
             "Radio",
             "Satellite",
             "WiFi"});
-            this.communicationTypes_checkedListBox.Location = new System.Drawing.Point(30, 373);
+            this.communicationTypes_checkedListBox.Location = new System.Drawing.Point(23, 352);
             this.communicationTypes_checkedListBox.Name = "communicationTypes_checkedListBox";
             this.communicationTypes_checkedListBox.Size = new System.Drawing.Size(205, 79);
             this.communicationTypes_checkedListBox.TabIndex = 16;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(23, 322);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(112, 17);
+            this.label16.TabIndex = 15;
+            this.label16.Text = "Тип комунікації:";
+            // 
+            // workingHoursMin_textBox
+            // 
+            this.workingHoursMin_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workingHoursMin_textBox.Location = new System.Drawing.Point(23, 282);
+            this.workingHoursMin_textBox.Name = "workingHoursMin_textBox";
+            this.workingHoursMin_textBox.Size = new System.Drawing.Size(81, 23);
+            this.workingHoursMin_textBox.TabIndex = 14;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(24, 232);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(203, 17);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "Поточний час роботи(місяці):";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(23, 142);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(148, 17);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Дальність роботи(м):";
+            // 
+            // dataTranmissionRangeMin_textBox
+            // 
+            this.dataTranmissionRangeMin_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataTranmissionRangeMin_textBox.Location = new System.Drawing.Point(23, 192);
+            this.dataTranmissionRangeMin_textBox.Name = "dataTranmissionRangeMin_textBox";
+            this.dataTranmissionRangeMin_textBox.Size = new System.Drawing.Size(81, 23);
+            this.dataTranmissionRangeMin_textBox.TabIndex = 11;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(150, 482);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(25, 13);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "До:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(24, 482);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(25, 13);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Від:";
+            // 
+            // priceMax_textBox
+            // 
+            this.priceMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.priceMax_textBox.Location = new System.Drawing.Point(153, 502);
+            this.priceMax_textBox.Name = "priceMax_textBox";
+            this.priceMax_textBox.Size = new System.Drawing.Size(78, 23);
+            this.priceMax_textBox.TabIndex = 8;
+            // 
+            // priceMin_textBox
+            // 
+            this.priceMin_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.priceMin_textBox.Location = new System.Drawing.Point(26, 502);
+            this.priceMin_textBox.Name = "priceMin_textBox";
+            this.priceMin_textBox.Size = new System.Drawing.Size(78, 23);
+            this.priceMin_textBox.TabIndex = 7;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(23, 452);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 17);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Ціна(грн):";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(24, 542);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(173, 17);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Сортування за вагою(кг):";
+            // 
+            // weightMin_textBox
+            // 
+            this.weightMin_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.weightMin_textBox.Location = new System.Drawing.Point(23, 592);
+            this.weightMin_textBox.Name = "weightMin_textBox";
+            this.weightMin_textBox.Size = new System.Drawing.Size(81, 23);
+            this.weightMin_textBox.TabIndex = 4;
+            // 
+            // model_textBox
+            // 
+            this.model_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.model_textBox.Location = new System.Drawing.Point(23, 102);
+            this.model_textBox.Name = "model_textBox";
+            this.model_textBox.Size = new System.Drawing.Size(208, 23);
+            this.model_textBox.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(24, 72);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 17);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Модель:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(20, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 17);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Бренд:";
+            // 
+            // brand_textBox
+            // 
+            this.brand_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.brand_textBox.Location = new System.Drawing.Point(23, 32);
+            this.brand_textBox.Name = "brand_textBox";
+            this.brand_textBox.Size = new System.Drawing.Size(208, 23);
+            this.brand_textBox.TabIndex = 0;
+            // 
+            // workingHoursMax_textBox
+            // 
+            this.workingHoursMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workingHoursMax_textBox.Location = new System.Drawing.Point(147, 282);
+            this.workingHoursMax_textBox.Name = "workingHoursMax_textBox";
+            this.workingHoursMax_textBox.Size = new System.Drawing.Size(81, 23);
+            this.workingHoursMax_textBox.TabIndex = 18;
+            // 
+            // dataTranmissionRangeMax_textBox
+            // 
+            this.dataTranmissionRangeMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataTranmissionRangeMax_textBox.Location = new System.Drawing.Point(147, 192);
+            this.dataTranmissionRangeMax_textBox.Name = "dataTranmissionRangeMax_textBox";
+            this.dataTranmissionRangeMax_textBox.Size = new System.Drawing.Size(81, 23);
+            this.dataTranmissionRangeMax_textBox.TabIndex = 19;
+            // 
+            // weightMax_textBox
+            // 
+            this.weightMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.weightMax_textBox.Location = new System.Drawing.Point(150, 592);
+            this.weightMax_textBox.Name = "weightMax_textBox";
+            this.weightMax_textBox.Size = new System.Drawing.Size(81, 23);
+            this.weightMax_textBox.TabIndex = 20;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(23, 572);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(25, 13);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "Від:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(23, 262);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(25, 13);
+            this.label18.TabIndex = 22;
+            this.label18.Text = "Від:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(23, 172);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(25, 13);
+            this.label19.TabIndex = 23;
+            this.label19.Text = "Від:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(150, 572);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(25, 13);
+            this.label20.TabIndex = 24;
+            this.label20.Text = "До:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(147, 262);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(25, 13);
+            this.label21.TabIndex = 25;
+            this.label21.Text = "До:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.Location = new System.Drawing.Point(146, 172);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(25, 13);
+            this.label22.TabIndex = 26;
+            this.label22.Text = "До:";
             // 
             // Form1
             // 
@@ -453,11 +579,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.wifiDevices_button);
+            this.Controls.Add(this.satelliteDevices_button);
+            this.Controls.Add(this.radioDevices_button);
+            this.Controls.Add(this.mobileDevices_button);
+            this.Controls.Add(this.bluetoothDevice_button);
             this.Controls.Add(this.devices_listView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.delete_button);
@@ -480,11 +606,11 @@
         private System.Windows.Forms.ListView devices_listView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button bluetoothDevice_button;
+        private System.Windows.Forms.Button mobileDevices_button;
+        private System.Windows.Forms.Button radioDevices_button;
+        private System.Windows.Forms.Button satelliteDevices_button;
+        private System.Windows.Forms.Button wifiDevices_button;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -496,19 +622,29 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox brand_textBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox weight_textBox;
+        private System.Windows.Forms.TextBox weightMin_textBox;
         private System.Windows.Forms.TextBox model_textBox;
-        private System.Windows.Forms.TextBox dataTranmissionRange_textBox;
+        private System.Windows.Forms.TextBox dataTranmissionRangeMin_textBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox maxPrice_textBox;
-        private System.Windows.Forms.TextBox minPrice_textBox;
+        private System.Windows.Forms.TextBox priceMax_textBox;
+        private System.Windows.Forms.TextBox priceMin_textBox;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox workingHours_textBox;
+        private System.Windows.Forms.TextBox workingHoursMin_textBox;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.CheckedListBox communicationTypes_checkedListBox;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button search_button;
+        private System.Windows.Forms.TextBox workingHoursMax_textBox;
+        private System.Windows.Forms.TextBox weightMax_textBox;
+        private System.Windows.Forms.TextBox dataTranmissionRangeMax_textBox;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
     }
 }
 

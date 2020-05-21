@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Schema;
 
 namespace CourseWork.Models
 {
@@ -13,7 +15,6 @@ namespace CourseWork.Models
         private string _model;
         private string _description;
         private string _imageLink;
-        private CommunicationTypes[] _communicationTypes;
         private double _dataTransmissionRange;
         private int _workingHours;
         private int _guaranteeMonth;
@@ -37,11 +38,6 @@ namespace CourseWork.Models
             set => _description = value;
         }
 
-        public override CommunicationTypes[] CommunicationTypes
-        {
-            get => _communicationTypes;
-            set => _communicationTypes = value;
-        }
         public override double DataTransmissionRange
         {
             get => _dataTransmissionRange;
@@ -75,17 +71,30 @@ namespace CourseWork.Models
 
         public override string IconPath
         {
-            get => _imageLink != null ? _imageLink : defaultImagePath;
+            get => _imageLink;
             set => _imageLink = value;
+        }    
+
+        public override string DefaultImagePath
+        {
+            get => defaultImagePath;
         }
 
-        public override string ToShortString()
+        public override XmlSchema GetSchema() => null;
+
+
+        public override void ReadXml(XmlReader reader)
         {
-            return $"Brand: {_brand}, Model: {_model}";
+
         }
+        public override void WriteXml(XmlWriter writer)
+        {
+
+        }
+
         public override string ToString()
         {
-            return "";
+            return $"Brand:{_brand}, Model:{_model}";
         }
     }
 }

@@ -24,6 +24,8 @@ namespace CourseWork
 
         private string newDeviceIconLink;
 
+        private string addIconPath = @"../../images/control-Icons/AddImage.png";
+
         public DeviceForm(CommunicationDevice device)
         {                  
             InitializeComponent();
@@ -31,14 +33,14 @@ namespace CourseWork
             {
                 deviceInfo = device;
                 FillFormFields();
-                addImage_button.BackgroundImage = new Bitmap(deviceInfo.IconPath);
-                communicationTypes_checkedListBox.Visible = false;
+                addImage_button.BackgroundImage = new Bitmap(deviceInfo.IconPath != null ? deviceInfo.IconPath : addIconPath);
+                communicationTypes_listBox1.Visible = false;
                 communicationType_label.Visible = false;
             }
             else
             {
                 creatingNewElement = true;
-                communicationTypes_checkedListBox.Visible = true;
+                communicationTypes_listBox1.Visible = true;
                 communicationType_label.Visible = true;
             }
         }
@@ -83,7 +85,10 @@ namespace CourseWork
             if (creatingNewElement)
             {
                 deviceInfo = CreateDeviceInstance();
-                deviceInfo.IconPath = newDeviceIconLink!= null ? newDeviceIconLink : deviceInfo.IconPath;
+                if(newDeviceIconLink != null)
+                {
+                    deviceInfo.IconPath = newDeviceIconLink;
+                }
             }
 
             deviceInfo.Brand = brand_textBox.Text;
@@ -124,7 +129,7 @@ namespace CourseWork
 
         private CommunicationDevice CreateDeviceInstance()
         {
-            string selectedType = communicationTypes_checkedListBox.SelectedItem.ToString();
+            string selectedType = communicationTypes_listBox1.SelectedItem.ToString();
 
             switch(selectedType)
             {

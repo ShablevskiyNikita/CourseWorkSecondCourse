@@ -40,20 +40,20 @@
             this.description_textBox = new System.Windows.Forms.TextBox();
             this.price_textBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.communicationType_label = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.weight_textBox = new System.Windows.Forms.TextBox();
             this.signalFrequency_textBox = new System.Windows.Forms.TextBox();
             this.guaranteeMonth_textBox = new System.Windows.Forms.TextBox();
             this.workingHours_textBox = new System.Windows.Forms.TextBox();
             this.dataTranmissionRange_textBox = new System.Windows.Forms.TextBox();
             this.save_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
-            this.communicationTypes_checkedListBox = new System.Windows.Forms.CheckedListBox();
-            this.communicationType_label = new System.Windows.Forms.Label();
+            this.communicationTypes_listBox1 = new System.Windows.Forms.ListBox();
+            this.weight_textBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -165,8 +165,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox2.Controls.Add(this.communicationTypes_listBox1);
             this.groupBox2.Controls.Add(this.communicationType_label);
-            this.groupBox2.Controls.Add(this.communicationTypes_checkedListBox);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
@@ -184,6 +184,16 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox2_Paint);
+            // 
+            // communicationType_label
+            // 
+            this.communicationType_label.AutoSize = true;
+            this.communicationType_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.communicationType_label.Location = new System.Drawing.Point(539, 82);
+            this.communicationType_label.Name = "communicationType_label";
+            this.communicationType_label.Size = new System.Drawing.Size(123, 20);
+            this.communicationType_label.TabIndex = 16;
+            this.communicationType_label.Text = "Тип комунікації:";
             // 
             // label9
             // 
@@ -234,14 +244,6 @@
             this.label5.Size = new System.Drawing.Size(186, 20);
             this.label5.TabIndex = 14;
             this.label5.Text = "Data transmission range:";
-            // 
-            // weight_textBox
-            // 
-            this.weight_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.weight_textBox.Location = new System.Drawing.Point(274, 132);
-            this.weight_textBox.Name = "weight_textBox";
-            this.weight_textBox.Size = new System.Drawing.Size(206, 23);
-            this.weight_textBox.TabIndex = 12;
             // 
             // signalFrequency_textBox
             // 
@@ -295,29 +297,29 @@
             this.cancel_button.UseVisualStyleBackColor = true;
             this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
-            // communicationTypes_checkedListBox
+            // communicationTypes_listBox1
             // 
-            this.communicationTypes_checkedListBox.FormattingEnabled = true;
-            this.communicationTypes_checkedListBox.Items.AddRange(new object[] {
+            this.communicationTypes_listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.communicationTypes_listBox1.FormattingEnabled = true;
+            this.communicationTypes_listBox1.ItemHeight = 20;
+            this.communicationTypes_listBox1.Items.AddRange(new object[] {
             "Bluetooth",
-            "Mobile",
-            "Radio",
+            "WiFi",
             "Satellite",
-            "WiFi"});
-            this.communicationTypes_checkedListBox.Location = new System.Drawing.Point(543, 105);
-            this.communicationTypes_checkedListBox.Name = "communicationTypes_checkedListBox";
-            this.communicationTypes_checkedListBox.Size = new System.Drawing.Size(205, 79);
-            this.communicationTypes_checkedListBox.TabIndex = 19;
+            "Mobile",
+            "Radio"});
+            this.communicationTypes_listBox1.Location = new System.Drawing.Point(543, 131);
+            this.communicationTypes_listBox1.Name = "communicationTypes_listBox1";
+            this.communicationTypes_listBox1.Size = new System.Drawing.Size(206, 24);
+            this.communicationTypes_listBox1.TabIndex = 20;
             // 
-            // communicationType_label
+            // weight_textBox
             // 
-            this.communicationType_label.AutoSize = true;
-            this.communicationType_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.communicationType_label.Location = new System.Drawing.Point(539, 82);
-            this.communicationType_label.Name = "communicationType_label";
-            this.communicationType_label.Size = new System.Drawing.Size(123, 20);
-            this.communicationType_label.TabIndex = 16;
-            this.communicationType_label.Text = "Тип комунікації:";
+            this.weight_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.weight_textBox.Location = new System.Drawing.Point(274, 132);
+            this.weight_textBox.Name = "weight_textBox";
+            this.weight_textBox.Size = new System.Drawing.Size(206, 23);
+            this.weight_textBox.TabIndex = 12;
             // 
             // DeviceForm
             // 
@@ -357,14 +359,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox price_textBox;
-        private System.Windows.Forms.TextBox weight_textBox;
         private System.Windows.Forms.TextBox signalFrequency_textBox;
         private System.Windows.Forms.TextBox guaranteeMonth_textBox;
         private System.Windows.Forms.TextBox workingHours_textBox;
         private System.Windows.Forms.TextBox dataTranmissionRange_textBox;
         private System.Windows.Forms.Button save_button;
         private System.Windows.Forms.Button cancel_button;
-        private System.Windows.Forms.CheckedListBox communicationTypes_checkedListBox;
         private System.Windows.Forms.Label communicationType_label;
+        private System.Windows.Forms.ListBox communicationTypes_listBox1;
+        private System.Windows.Forms.TextBox weight_textBox;
     }
 }

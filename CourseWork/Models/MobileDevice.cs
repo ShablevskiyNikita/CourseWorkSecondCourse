@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Schema;
 
 namespace CourseWork.Models
 {
     public class MobileDevice : CommunicationDevice
     {
-        private readonly string defaultImagePath = @"../../images/default/mobile.png";
+        public readonly string defaultImagePath = @"../../images/default/mobile.png";
         private string _brand;
         private string _model;
         private string _description;
         private string _imageLink;
-        private CommunicationTypes[] _communicationTypes;
         private double _dataTransmissionRange;
         private int _workingHours;
         private int _guaranteeMonth;
@@ -37,11 +38,6 @@ namespace CourseWork.Models
             set => _description = value;
         }
 
-        public override CommunicationTypes[] CommunicationTypes
-        {
-            get => _communicationTypes;
-            set => _communicationTypes = value;
-        }
         public override double DataTransmissionRange
         {
             get => _dataTransmissionRange;
@@ -75,17 +71,30 @@ namespace CourseWork.Models
 
         public override string IconPath
         {
-            get => _imageLink != null ? _imageLink : defaultImagePath;
+            get => _imageLink;
             set => _imageLink = value;
         }
 
-        public override string ToShortString()
+        public override string DefaultImagePath
         {
-            return $"Brand:{_brand}, Model:{_model}";
+            get => defaultImagePath;
         }
+
+        public override XmlSchema GetSchema() => null;
+
+
+        public override void ReadXml(XmlReader reader)
+        {
+
+        }
+        public override void WriteXml(XmlWriter writer)
+        {
+
+        }
+
         public override string ToString()
         {
-            return "d";
+            return $"Brand:{_brand}, Model:{_model}";
         }
     }
 }

@@ -74,7 +74,7 @@
             // brand_textBox
             // 
             this.brand_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.brand_textBox.Location = new System.Drawing.Point(12, 35);
+            this.brand_textBox.Location = new System.Drawing.Point(12, 49);
             this.brand_textBox.Name = "brand_textBox";
             this.brand_textBox.Size = new System.Drawing.Size(206, 23);
             this.brand_textBox.TabIndex = 1;
@@ -82,7 +82,7 @@
             // model_textBox
             // 
             this.model_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.model_textBox.Location = new System.Drawing.Point(280, 35);
+            this.model_textBox.Location = new System.Drawing.Point(280, 49);
             this.model_textBox.Name = "model_textBox";
             this.model_textBox.Size = new System.Drawing.Size(206, 23);
             this.model_textBox.TabIndex = 2;
@@ -93,9 +93,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(8, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 20);
+            this.label1.Size = new System.Drawing.Size(66, 20);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Brand:";
+            this.label1.Text = "Бренд :";
             // 
             // label2
             // 
@@ -103,19 +103,19 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(276, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
+            this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Model:";
+            this.label2.Text = "Модель :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(8, 77);
+            this.label3.Location = new System.Drawing.Point(8, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 20);
+            this.label3.Size = new System.Drawing.Size(55, 20);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Description:";
+            this.label3.Text = "Опис :";
             // 
             // groupBox1
             // 
@@ -140,16 +140,16 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(276, 77);
+            this.label10.Location = new System.Drawing.Point(276, 102);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 20);
+            this.label10.Size = new System.Drawing.Size(81, 20);
             this.label10.TabIndex = 19;
-            this.label10.Text = "Price:";
+            this.label10.Text = "Ціна(грн):";
             // 
             // description_textBox
             // 
             this.description_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.description_textBox.Location = new System.Drawing.Point(12, 112);
+            this.description_textBox.Location = new System.Drawing.Point(12, 134);
             this.description_textBox.Name = "description_textBox";
             this.description_textBox.Size = new System.Drawing.Size(206, 23);
             this.description_textBox.TabIndex = 7;
@@ -157,7 +157,7 @@
             // price_textBox
             // 
             this.price_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.price_textBox.Location = new System.Drawing.Point(280, 112);
+            this.price_textBox.Location = new System.Drawing.Point(280, 134);
             this.price_textBox.Name = "price_textBox";
             this.price_textBox.Size = new System.Drawing.Size(206, 23);
             this.price_textBox.TabIndex = 13;
@@ -189,7 +189,7 @@
             // 
             this.communicationType_label.AutoSize = true;
             this.communicationType_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.communicationType_label.Location = new System.Drawing.Point(539, 82);
+            this.communicationType_label.Location = new System.Drawing.Point(539, 105);
             this.communicationType_label.Name = "communicationType_label";
             this.communicationType_label.Size = new System.Drawing.Size(123, 20);
             this.communicationType_label.TabIndex = 16;
@@ -201,9 +201,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(270, 105);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 20);
+            this.label9.Size = new System.Drawing.Size(74, 20);
             this.label9.TabIndex = 18;
-            this.label9.Text = "Weight:";
+            this.label9.Text = "Вага(кг):";
             // 
             // label8
             // 
@@ -211,9 +211,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(6, 105);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 20);
+            this.label8.Size = new System.Drawing.Size(169, 20);
             this.label8.TabIndex = 17;
-            this.label8.Text = "Signal frequency:";
+            this.label8.Text = "Частота сигналу(Гц):";
             // 
             // label7
             // 
@@ -221,9 +221,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(539, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 20);
+            this.label7.Size = new System.Drawing.Size(132, 20);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Guarantee month:";
+            this.label7.Text = "Гарантія(місяці):";
             // 
             // label6
             // 
@@ -231,9 +231,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(270, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 20);
+            this.label6.Size = new System.Drawing.Size(240, 20);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Working hours:";
+            this.label6.Text = "Поточний час роботи(години):";
             // 
             // label5
             // 
@@ -241,9 +241,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(6, 16);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(186, 20);
+            this.label5.Size = new System.Drawing.Size(103, 20);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Data transmission range:";
+            this.label5.Text = "Радіус дії(м):";
             // 
             // signalFrequency_textBox
             // 

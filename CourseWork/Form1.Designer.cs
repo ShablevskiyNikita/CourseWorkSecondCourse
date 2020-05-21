@@ -75,6 +75,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.clearFilters_button = new System.Windows.Forms.Button();
+            this.save_button = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +89,7 @@
             this.add_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.add_button.FlatAppearance.BorderSize = 0;
             this.add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_button.Location = new System.Drawing.Point(706, 599);
+            this.add_button.Location = new System.Drawing.Point(760, 629);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(50, 50);
             this.add_button.TabIndex = 1;
@@ -102,7 +104,7 @@
             this.edit_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.edit_button.FlatAppearance.BorderSize = 0;
             this.edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.edit_button.Location = new System.Drawing.Point(777, 599);
+            this.edit_button.Location = new System.Drawing.Point(839, 629);
             this.edit_button.Name = "edit_button";
             this.edit_button.Size = new System.Drawing.Size(50, 50);
             this.edit_button.TabIndex = 2;
@@ -117,7 +119,7 @@
             this.delete_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delete_button.FlatAppearance.BorderSize = 0;
             this.delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_button.Location = new System.Drawing.Point(851, 599);
+            this.delete_button.Location = new System.Drawing.Point(907, 629);
             this.delete_button.Name = "delete_button";
             this.delete_button.Size = new System.Drawing.Size(50, 50);
             this.delete_button.TabIndex = 3;
@@ -144,7 +146,7 @@
             this.devices_listView.Location = new System.Drawing.Point(351, 186);
             this.devices_listView.MultiSelect = false;
             this.devices_listView.Name = "devices_listView";
-            this.devices_listView.Size = new System.Drawing.Size(550, 397);
+            this.devices_listView.Size = new System.Drawing.Size(606, 437);
             this.devices_listView.TabIndex = 5;
             this.devices_listView.TileSize = new System.Drawing.Size(500, 70);
             this.devices_listView.UseCompatibleStateImageBehavior = false;
@@ -159,7 +161,8 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Device";
-            this.columnHeader2.Width = 320;
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader2.Width = 470;
             // 
             // bluetoothDevice_button
             // 
@@ -176,7 +179,7 @@
             // 
             this.mobileDevices_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mobileDevices_button.BackgroundImage")));
             this.mobileDevices_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mobileDevices_button.Location = new System.Drawing.Point(466, 44);
+            this.mobileDevices_button.Location = new System.Drawing.Point(448, 44);
             this.mobileDevices_button.Name = "mobileDevices_button";
             this.mobileDevices_button.Size = new System.Drawing.Size(70, 54);
             this.mobileDevices_button.TabIndex = 7;
@@ -187,7 +190,7 @@
             // 
             this.radioDevices_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("radioDevices_button.BackgroundImage")));
             this.radioDevices_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.radioDevices_button.Location = new System.Drawing.Point(583, 44);
+            this.radioDevices_button.Location = new System.Drawing.Point(550, 44);
             this.radioDevices_button.Name = "radioDevices_button";
             this.radioDevices_button.Size = new System.Drawing.Size(70, 54);
             this.radioDevices_button.TabIndex = 8;
@@ -198,7 +201,7 @@
             // 
             this.satelliteDevices_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("satelliteDevices_button.BackgroundImage")));
             this.satelliteDevices_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.satelliteDevices_button.Location = new System.Drawing.Point(706, 44);
+            this.satelliteDevices_button.Location = new System.Drawing.Point(654, 44);
             this.satelliteDevices_button.Name = "satelliteDevices_button";
             this.satelliteDevices_button.Size = new System.Drawing.Size(70, 54);
             this.satelliteDevices_button.TabIndex = 9;
@@ -209,7 +212,7 @@
             // 
             this.wifiDevices_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wifiDevices_button.BackgroundImage")));
             this.wifiDevices_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.wifiDevices_button.Location = new System.Drawing.Point(831, 44);
+            this.wifiDevices_button.Location = new System.Drawing.Point(760, 44);
             this.wifiDevices_button.Name = "wifiDevices_button";
             this.wifiDevices_button.Size = new System.Drawing.Size(70, 54);
             this.wifiDevices_button.TabIndex = 10;
@@ -229,51 +232,52 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(334, 110);
+            this.label3.Location = new System.Drawing.Point(359, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 13);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Bluetooth Devices";
+            this.label3.Text = "Bluetooth";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(463, 110);
+            this.label4.Location = new System.Drawing.Point(466, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Mobile Devices";
+            this.label4.Text = "Mobile";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(576, 110);
+            this.label5.Location = new System.Drawing.Point(567, 110);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 13);
+            this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Radio Devices";
+            this.label5.Text = "Radio";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(703, 110);
+            this.label6.Location = new System.Drawing.Point(664, 110);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 13);
+            this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Satellite Devices";
+            this.label6.Text = "Satellite";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(831, 110);
+            this.label7.Location = new System.Drawing.Point(781, 110);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 13);
+            this.label7.Size = new System.Drawing.Size(28, 13);
             this.label7.TabIndex = 16;
-            this.label7.Text = "WiFi Devices";
+            this.label7.Text = "WiFi";
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.Controls.Add(this.clearFilters_button);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.label20);
@@ -304,7 +308,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(19, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 637);
+            this.groupBox1.Size = new System.Drawing.Size(282, 680);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
@@ -316,7 +320,7 @@
             this.search_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.search_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.search_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.search_button.Location = new System.Drawing.Point(246, 7);
+            this.search_button.Location = new System.Drawing.Point(211, 641);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(30, 26);
             this.search_button.TabIndex = 17;
@@ -332,7 +336,7 @@
             "Radio",
             "Satellite",
             "WiFi"});
-            this.communicationTypes_checkedListBox.Location = new System.Drawing.Point(23, 352);
+            this.communicationTypes_checkedListBox.Location = new System.Drawing.Point(36, 361);
             this.communicationTypes_checkedListBox.Name = "communicationTypes_checkedListBox";
             this.communicationTypes_checkedListBox.Size = new System.Drawing.Size(205, 79);
             this.communicationTypes_checkedListBox.TabIndex = 16;
@@ -341,7 +345,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(23, 322);
+            this.label16.Location = new System.Drawing.Point(36, 331);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(112, 17);
             this.label16.TabIndex = 15;
@@ -350,7 +354,7 @@
             // workingHoursMin_textBox
             // 
             this.workingHoursMin_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.workingHoursMin_textBox.Location = new System.Drawing.Point(23, 282);
+            this.workingHoursMin_textBox.Location = new System.Drawing.Point(36, 291);
             this.workingHoursMin_textBox.Name = "workingHoursMin_textBox";
             this.workingHoursMin_textBox.Size = new System.Drawing.Size(81, 23);
             this.workingHoursMin_textBox.TabIndex = 14;
@@ -359,7 +363,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(24, 232);
+            this.label15.Location = new System.Drawing.Point(37, 241);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(203, 17);
             this.label15.TabIndex = 13;
@@ -369,7 +373,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(23, 142);
+            this.label14.Location = new System.Drawing.Point(36, 151);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(148, 17);
             this.label14.TabIndex = 12;
@@ -378,7 +382,7 @@
             // dataTranmissionRangeMin_textBox
             // 
             this.dataTranmissionRangeMin_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataTranmissionRangeMin_textBox.Location = new System.Drawing.Point(23, 192);
+            this.dataTranmissionRangeMin_textBox.Location = new System.Drawing.Point(36, 201);
             this.dataTranmissionRangeMin_textBox.Name = "dataTranmissionRangeMin_textBox";
             this.dataTranmissionRangeMin_textBox.Size = new System.Drawing.Size(81, 23);
             this.dataTranmissionRangeMin_textBox.TabIndex = 11;
@@ -387,7 +391,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(150, 482);
+            this.label13.Location = new System.Drawing.Point(163, 491);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(25, 13);
             this.label13.TabIndex = 10;
@@ -397,7 +401,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(24, 482);
+            this.label12.Location = new System.Drawing.Point(37, 491);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(25, 13);
             this.label12.TabIndex = 9;
@@ -406,7 +410,7 @@
             // priceMax_textBox
             // 
             this.priceMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.priceMax_textBox.Location = new System.Drawing.Point(153, 502);
+            this.priceMax_textBox.Location = new System.Drawing.Point(166, 511);
             this.priceMax_textBox.Name = "priceMax_textBox";
             this.priceMax_textBox.Size = new System.Drawing.Size(78, 23);
             this.priceMax_textBox.TabIndex = 8;
@@ -414,7 +418,7 @@
             // priceMin_textBox
             // 
             this.priceMin_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.priceMin_textBox.Location = new System.Drawing.Point(26, 502);
+            this.priceMin_textBox.Location = new System.Drawing.Point(39, 511);
             this.priceMin_textBox.Name = "priceMin_textBox";
             this.priceMin_textBox.Size = new System.Drawing.Size(78, 23);
             this.priceMin_textBox.TabIndex = 7;
@@ -423,7 +427,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(23, 452);
+            this.label11.Location = new System.Drawing.Point(36, 461);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 17);
             this.label11.TabIndex = 6;
@@ -433,7 +437,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(24, 542);
+            this.label10.Location = new System.Drawing.Point(37, 551);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(173, 17);
             this.label10.TabIndex = 5;
@@ -442,7 +446,7 @@
             // weightMin_textBox
             // 
             this.weightMin_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.weightMin_textBox.Location = new System.Drawing.Point(23, 592);
+            this.weightMin_textBox.Location = new System.Drawing.Point(36, 601);
             this.weightMin_textBox.Name = "weightMin_textBox";
             this.weightMin_textBox.Size = new System.Drawing.Size(81, 23);
             this.weightMin_textBox.TabIndex = 4;
@@ -450,7 +454,7 @@
             // model_textBox
             // 
             this.model_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.model_textBox.Location = new System.Drawing.Point(23, 102);
+            this.model_textBox.Location = new System.Drawing.Point(36, 111);
             this.model_textBox.Name = "model_textBox";
             this.model_textBox.Size = new System.Drawing.Size(208, 23);
             this.model_textBox.TabIndex = 3;
@@ -459,7 +463,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(24, 72);
+            this.label9.Location = new System.Drawing.Point(37, 81);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 17);
             this.label9.TabIndex = 2;
@@ -469,7 +473,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(20, 7);
+            this.label8.Location = new System.Drawing.Point(33, 16);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 17);
             this.label8.TabIndex = 1;
@@ -478,7 +482,7 @@
             // brand_textBox
             // 
             this.brand_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.brand_textBox.Location = new System.Drawing.Point(23, 32);
+            this.brand_textBox.Location = new System.Drawing.Point(36, 41);
             this.brand_textBox.Name = "brand_textBox";
             this.brand_textBox.Size = new System.Drawing.Size(208, 23);
             this.brand_textBox.TabIndex = 0;
@@ -486,7 +490,7 @@
             // workingHoursMax_textBox
             // 
             this.workingHoursMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.workingHoursMax_textBox.Location = new System.Drawing.Point(147, 282);
+            this.workingHoursMax_textBox.Location = new System.Drawing.Point(160, 291);
             this.workingHoursMax_textBox.Name = "workingHoursMax_textBox";
             this.workingHoursMax_textBox.Size = new System.Drawing.Size(81, 23);
             this.workingHoursMax_textBox.TabIndex = 18;
@@ -494,7 +498,7 @@
             // dataTranmissionRangeMax_textBox
             // 
             this.dataTranmissionRangeMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataTranmissionRangeMax_textBox.Location = new System.Drawing.Point(147, 192);
+            this.dataTranmissionRangeMax_textBox.Location = new System.Drawing.Point(160, 201);
             this.dataTranmissionRangeMax_textBox.Name = "dataTranmissionRangeMax_textBox";
             this.dataTranmissionRangeMax_textBox.Size = new System.Drawing.Size(81, 23);
             this.dataTranmissionRangeMax_textBox.TabIndex = 19;
@@ -502,7 +506,7 @@
             // weightMax_textBox
             // 
             this.weightMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.weightMax_textBox.Location = new System.Drawing.Point(150, 592);
+            this.weightMax_textBox.Location = new System.Drawing.Point(163, 601);
             this.weightMax_textBox.Name = "weightMax_textBox";
             this.weightMax_textBox.Size = new System.Drawing.Size(81, 23);
             this.weightMax_textBox.TabIndex = 20;
@@ -511,7 +515,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(23, 572);
+            this.label17.Location = new System.Drawing.Point(36, 581);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(25, 13);
             this.label17.TabIndex = 21;
@@ -521,7 +525,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(23, 262);
+            this.label18.Location = new System.Drawing.Point(36, 271);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(25, 13);
             this.label18.TabIndex = 22;
@@ -531,7 +535,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(23, 172);
+            this.label19.Location = new System.Drawing.Point(36, 181);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(25, 13);
             this.label19.TabIndex = 23;
@@ -541,7 +545,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(150, 572);
+            this.label20.Location = new System.Drawing.Point(163, 581);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(25, 13);
             this.label20.TabIndex = 24;
@@ -551,7 +555,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(147, 262);
+            this.label21.Location = new System.Drawing.Point(160, 271);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(25, 13);
             this.label21.TabIndex = 25;
@@ -561,17 +565,48 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(146, 172);
+            this.label22.Location = new System.Drawing.Point(159, 181);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(25, 13);
             this.label22.TabIndex = 26;
             this.label22.Text = "До:";
             // 
+            // clearFilters_button
+            // 
+            this.clearFilters_button.BackColor = System.Drawing.Color.White;
+            this.clearFilters_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("clearFilters_button.BackgroundImage")));
+            this.clearFilters_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.clearFilters_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearFilters_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.clearFilters_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearFilters_button.Location = new System.Drawing.Point(36, 641);
+            this.clearFilters_button.Name = "clearFilters_button";
+            this.clearFilters_button.Size = new System.Drawing.Size(30, 26);
+            this.clearFilters_button.TabIndex = 27;
+            this.clearFilters_button.UseVisualStyleBackColor = false;
+            this.clearFilters_button.Click += new System.EventHandler(this.clearFilters_button_Click);
+            // 
+            // save_button
+            // 
+            this.save_button.BackColor = System.Drawing.SystemColors.Control;
+            this.save_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("save_button.BackgroundImage")));
+            this.save_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.save_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.save_button.FlatAppearance.BorderSize = 0;
+            this.save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_button.Location = new System.Drawing.Point(883, 135);
+            this.save_button.Name = "save_button";
+            this.save_button.Size = new System.Drawing.Size(74, 45);
+            this.save_button.TabIndex = 18;
+            this.save_button.UseVisualStyleBackColor = false;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 661);
+            this.ClientSize = new System.Drawing.Size(977, 704);
+            this.Controls.Add(this.save_button);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -645,6 +680,8 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button clearFilters_button;
+        private System.Windows.Forms.Button save_button;
     }
 }
 

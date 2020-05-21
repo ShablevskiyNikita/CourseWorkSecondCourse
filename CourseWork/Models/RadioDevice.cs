@@ -85,16 +85,91 @@ namespace CourseWork.Models
 
         public override void ReadXml(XmlReader reader)
         {
+            reader.MoveToContent();
+            while (reader.Read())
+            {
+                if (reader.IsStartElement())
+                {
+                    switch (reader.Name)
+                    {
+                        case "Brand":
+                            reader.Read();
+                            _brand = reader.Value;
+                            break;
 
+                        case "Model":
+                            reader.Read();
+                            _model = reader.Value;
+                            break;
+
+                        case "Description":
+                            reader.Read();
+                            _description = reader.Value;
+                            break;
+
+
+                        case "ImageLink":
+                            reader.Read();
+                            _imageLink = reader.Value;
+                            break;
+
+                        case "DataTransmissionRange":
+                            reader.Read();
+                            _dataTransmissionRange = double.Parse(reader.Value);
+                            break;
+
+                        case "WorkingHours":
+                            reader.Read();
+                            _workingHours = int.Parse(reader.Value);
+                            break;
+
+                        case "GuaranteeMonth":
+                            reader.Read();
+                            _guaranteeMonth = int.Parse(reader.Value);
+                            break;
+
+                        case "Frequency":
+                            reader.Read();
+                            _frequency = double.Parse(reader.Value);
+                            break;
+
+                        case "Price":
+                            reader.Read();
+                            _price = double.Parse(reader.Value);
+                            break;
+
+                        case "Weight":
+                            reader.Read();
+                            _weight = double.Parse(reader.Value);
+                            break;
+                    }
+                }
+                if (reader.Name.Equals("RadioDevice"))
+                {
+                    reader.Read();
+                    break;
+                }
+            }
         }
         public override void WriteXml(XmlWriter writer)
         {
+            writer.WriteStartElement("RadioDevice");
+            writer.WriteElementString("Brand", _brand);
+            writer.WriteElementString("Model", _model);
+            writer.WriteElementString("Description", _description);
+            writer.WriteElementString("ImageLink", _imageLink != null ? _imageLink : defaultImagePath);
+            writer.WriteElementString("DataTransmissionRange", _dataTransmissionRange.ToString());
+            writer.WriteElementString("WorkingHours", _workingHours.ToString());
+            writer.WriteElementString("GuaranteeMonth", _guaranteeMonth.ToString());
+            writer.WriteElementString("Frequency", _frequency.ToString());
+            writer.WriteElementString("Price", _price.ToString());
+            writer.WriteElementString("Weight", _weight.ToString());
 
+            writer.WriteEndElement();
         }
-
         public override string ToString()
         {
-            return $"Brand:{_brand}, Model:{_model}";
+            return $"Бренд: {_brand}, Модель: {_model}, Гарантія: {_guaranteeMonth}, Вага: {_weight} кг, Частота сигналу: {_frequency} Гц, Ціна: {_price} грн ";
         }
     }
 }

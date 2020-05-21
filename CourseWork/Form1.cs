@@ -14,43 +14,24 @@ namespace CourseWork
 {
     public partial class Form1 : Form
     {
-        List<CommunicationDevice> testList = new List<CommunicationDevice>();
+        List<CommunicationDevice> devicesList = new List<CommunicationDevice>();
         public Form1()
         {
             InitializeComponent();
             delete_button.Enabled = false;
             edit_button.Enabled = false;
-            MobileDevice test1 = new MobileDevice();
-            test1.Brand = "test1";
-            test1.Model = "test1";
-            test1.Description = "nahuy";
-            RadioDevice test2 = new RadioDevice();
-            test2.Brand = "test2";
-            test2.Model = "test2";
-            test2.Description = "nahuy";
-            SatelliteDevice test3 = new SatelliteDevice();
-            test3.Brand = "test3";
-            test3.Model = "test3";
-            test3.Description = "nahuy";
-            BluetoothDevice test4 = new BluetoothDevice();
-            test4.Brand = "test4";
-            test4.Model = "test4";
-            test4.Description = "nahuy";
-            WifiDevice test5 = new WifiDevice();
-            test5.Brand = "test5";
-            test5.Model = "test5";
-            test5.Description = "nahuy";
-            WifiDevice test6 = new WifiDevice();
-            test6.Brand = "test6";
-            test6.Model = "test6";
-            test6.Description = "nahuy";
 
-            testList.Add(test1);
-            testList.Add(test2);
-            //testList.Add(test3);
-            //testList.Add(test4);
-            //testList.Add(test5);
-            //testList.Add(test6);
+            devicesList = CommunicationDevice.ReadDevicesList("devices.xml");
+
+            ToolTip TOOLTIP = new ToolTip();
+
+            TOOLTIP.SetToolTip(search_button, "Пошук");
+            TOOLTIP.SetToolTip(add_button, "Додати девайс");
+            TOOLTIP.SetToolTip(edit_button, "Редагувати дані");
+            TOOLTIP.SetToolTip(delete_button, "Видалити девайс");
+            TOOLTIP.SetToolTip(clearFilters_button, "Видалити девайс");
+            TOOLTIP.SetToolTip(save_button, "Зберегти зміни");
+
 
             LoadListViewData(null);
         }
@@ -67,18 +48,16 @@ namespace CourseWork
 
             if(data == null)
             {
-                for (int i = 0; i < testList.Count; i++)
+                for (int i = 0; i < devicesList.Count; i++)
                 {
-                    //MessageBox.Show(testList[i].GetType().ToString().Split('.')[2]);
-                    imageList.Images.Add(i.ToString(), new Bitmap(testList[i].IconPath != null ? testList[i].IconPath : testList[i].DefaultImagePath));
-                    devices_listView.Items.Add(new ListViewItem(testList[i].ToString(), i.ToString()));
+                    imageList.Images.Add(i.ToString(), new Bitmap(devicesList[i].IconPath != null ? devicesList[i].IconPath : devicesList[i].DefaultImagePath));
+                    devices_listView.Items.Add(new ListViewItem(devicesList[i].ToString(), i.ToString()));
                 }
             }
             else
             {
                 for (int i = 0; i < data.Count; i++)
                 {
-                    //MessageBox.Show(testList[i].GetType().ToString().Split('.')[2]);
                     imageList.Images.Add(i.ToString(), new Bitmap(data[i].IconPath != null ? data[i].IconPath : data[i].DefaultImagePath));
                     devices_listView.Items.Add(new ListViewItem(data[i].ToString(), i.ToString()));
                 }
@@ -104,13 +83,18 @@ namespace CourseWork
 
         private void edit_button_Click(object sender, EventArgs e)
         {
+            if(devices_listView.FocusedItem == null)
+            {
+                MessageBox.Show("Жоден з елементів не було вибрано");
+                return;
+            }
             int selectedIndex = devices_listView.FocusedItem.Index;
 
-            DeviceForm deviceEditForm = new DeviceForm(testList[selectedIndex]);
+            DeviceForm deviceEditForm = new DeviceForm(devicesList[selectedIndex]);
             if(deviceEditForm.ShowDialog() == DialogResult.OK)
             {
                 LoadListViewData(null);
-                devices_listView.Items[selectedIndex] = new ListViewItem(testList[selectedIndex].ToString(), selectedIndex.ToString());
+                devices_listView.Items[selectedIndex] = new ListViewItem(devicesList[selectedIndex].ToString(), selectedIndex.ToString());
             }
             else
             {
@@ -124,7 +108,7 @@ namespace CourseWork
             DialogResult result = MessageBox.Show("Дійсно бажаєте видалити информацію про девайc?\n\nІнформацію буде не можливо відновити", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {               
-                testList.RemoveAt(selectedIndex);
+                devicesList.RemoveAt(selectedIndex);
                 LoadListViewData(null);
                 MessageBox.Show("Успішо видалено!");
             }
@@ -132,7 +116,7 @@ namespace CourseWork
 
         private void saveNewDevice(CommunicationDevice deviceInfo)
         {
-            testList.Add(deviceInfo);
+            devicesList.Add(deviceInfo);
             LoadListViewData(null);           
         }
 
@@ -224,7 +208,7 @@ namespace CourseWork
             }
 
 
-            List<CommunicationDevice> sortedList = testList.FindAll(device =>
+            List<CommunicationDevice> sortedList = devicesList.FindAll(device =>
                 device.Brand.Contains(searchBrand)
                 && device.Model.Contains(searchModel)
                 && device.DataTransmissionRange >= searchDataTranmissionRangeMin && device.DataTransmissionRange <= searchDataTranmissionRangeMax
@@ -259,6 +243,28 @@ namespace CourseWork
             }
 
             return false;
+        }
+
+        private void clearFilters_button_Click(object sender, EventArgs e)
+        {
+            brand_textBox.Text = "";
+            model_textBox.Text = "";
+            dataTranmissionRangeMin_textBox.Text = "";
+            dataTranmissionRangeMax_textBox.Text = "";
+            workingHoursMin_textBox.Text = "";
+            workingHoursMax_textBox.Text = "";
+            for (int i = 0; i < communicationTypes_checkedListBox.Items.Count; i++)
+                communicationTypes_checkedListBox.SetItemCheckState(i, CheckState.Unchecked);
+            priceMin_textBox.Text = "";
+            priceMax_textBox.Text = "";
+            weightMin_textBox.Text = "";
+            weightMax_textBox.Text = "";
+            LoadListViewData(null);
+        }
+
+        private void save_button_Click(object sender, EventArgs e)
+        {
+            CommunicationDevice.WriteDevicesToFile("devices.xml", devicesList);
         }
     }
 }

@@ -140,7 +140,7 @@ namespace CourseWork
                 case "Mobile":
                     return new MobileDevice();
                 case "WiFi":
-                    return new WifiDevice();
+                    return new WiFiDevice();
                 case "Satellite":
                     return new SatelliteDevice();
 

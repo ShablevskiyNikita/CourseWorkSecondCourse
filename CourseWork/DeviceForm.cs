@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CourseWork.Models;
@@ -148,6 +149,105 @@ namespace CourseWork
                     return null;
             }
 
+        }
+
+        private void brand_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\w+");
+            if (!regexGroupFormat.IsMatch(brand_textBox.Text))
+            {
+                e.Cancel = true;
+                MessageBox.Show("Назва тренду повинна складатися із букв, і не може бути пустою!");
+            }
+        }
+
+        private void model_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\w+");
+            if (!regexGroupFormat.IsMatch(brand_textBox.Text))
+            {
+                e.Cancel = true;
+                MessageBox.Show("Назва тренду повинна складатися із букв, і не може бути пустою!");
+            }
+        }
+
+        private void description_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\w+");
+            if (!regexGroupFormat.IsMatch(brand_textBox.Text))
+            {
+                e.Cancel = true;
+                MessageBox.Show("Назва тренду повинна складатися із букв, і не може бути пустою!");
+            }
+        }
+
+        private void price_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\d+$|^\d+,\d+$");
+            if (!regexGroupFormat.IsMatch(brand_textBox.Text))
+            {
+                e.Cancel = true;
+                MessageBox.Show("Ціна повинна бути числом, вигляду 100 або 100,10 і не може бути пустою!");
+            }
+        }
+
+        private void dataTranmissionRange_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\d+$|^\d+,\d+$");
+            if (!regexGroupFormat.IsMatch(brand_textBox.Text))
+            {
+                e.Cancel = true;
+                MessageBox.Show("Радус дії повинен бути числом, вигляду 100 або 100,10 і не може бути пустим!");
+            }
+        }
+
+        private void workingHours_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\d+$");
+            if (!regexGroupFormat.IsMatch(brand_textBox.Text))
+            {
+                e.Cancel = true;
+                MessageBox.Show("Кількість робочих часів повинна бути цілим числом і не може бути пустим!");
+            }
+        }
+
+        private void guaranteeMonth_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\d+");
+            if (!regexGroupFormat.IsMatch(brand_textBox.Text))
+            {
+                e.Cancel = true;
+                MessageBox.Show("Кількість гарантійних місцяв повинна бути цілим числом!");
+            }
+        }
+
+        private void signalFrequency_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\w+");
+            if (!regexGroupFormat.IsMatch(brand_textBox.Text))
+            {
+                e.Cancel = true;
+                MessageBox.Show("Частота сигналу повинна бути числом, вигляду 100 або 100,10 і не може бути пустою!");
+            }
+        }
+
+        private void weight_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\w+");
+            if (!regexGroupFormat.IsMatch(brand_textBox.Text))
+            {
+                e.Cancel = true;
+                MessageBox.Show("Назва тренду повинна складатися із букв, і не може бути пустою!");
+            }
+        }
+
+        private void communicationTypes_listBox1_Validating(object sender, CancelEventArgs e)
+        {          
+            if (!(communicationTypes_listBox1.SelectedItem == null) && creatingNewElement)
+            {
+                e.Cancel = true;
+                MessageBox.Show("Ви повинні обрати тип девайсу!");
+            }
         }
     }
 }

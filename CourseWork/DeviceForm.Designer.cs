@@ -78,6 +78,7 @@
             this.brand_textBox.Name = "brand_textBox";
             this.brand_textBox.Size = new System.Drawing.Size(206, 23);
             this.brand_textBox.TabIndex = 1;
+            this.brand_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.brand_textBox_Validating);
             // 
             // model_textBox
             // 
@@ -86,6 +87,7 @@
             this.model_textBox.Name = "model_textBox";
             this.model_textBox.Size = new System.Drawing.Size(206, 23);
             this.model_textBox.TabIndex = 2;
+            this.model_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.model_textBox_Validating);
             // 
             // label1
             // 
@@ -153,6 +155,7 @@
             this.description_textBox.Name = "description_textBox";
             this.description_textBox.Size = new System.Drawing.Size(206, 23);
             this.description_textBox.TabIndex = 7;
+            this.description_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.description_textBox_Validating);
             // 
             // price_textBox
             // 
@@ -161,6 +164,7 @@
             this.price_textBox.Name = "price_textBox";
             this.price_textBox.Size = new System.Drawing.Size(206, 23);
             this.price_textBox.TabIndex = 13;
+            this.price_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.price_textBox_Validating);
             // 
             // groupBox2
             // 
@@ -200,6 +204,7 @@
             this.communicationTypes_listBox1.Name = "communicationTypes_listBox1";
             this.communicationTypes_listBox1.Size = new System.Drawing.Size(206, 24);
             this.communicationTypes_listBox1.TabIndex = 20;
+            this.communicationTypes_listBox1.Validating += new System.ComponentModel.CancelEventHandler(this.communicationTypes_listBox1_Validating);
             // 
             // communicationType_label
             // 
@@ -268,6 +273,7 @@
             this.weight_textBox.Name = "weight_textBox";
             this.weight_textBox.Size = new System.Drawing.Size(206, 23);
             this.weight_textBox.TabIndex = 12;
+            this.weight_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.weight_textBox_Validating);
             // 
             // signalFrequency_textBox
             // 
@@ -276,6 +282,7 @@
             this.signalFrequency_textBox.Name = "signalFrequency_textBox";
             this.signalFrequency_textBox.Size = new System.Drawing.Size(206, 23);
             this.signalFrequency_textBox.TabIndex = 11;
+            this.signalFrequency_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.signalFrequency_textBox_Validating);
             // 
             // guaranteeMonth_textBox
             // 
@@ -284,6 +291,7 @@
             this.guaranteeMonth_textBox.Name = "guaranteeMonth_textBox";
             this.guaranteeMonth_textBox.Size = new System.Drawing.Size(206, 23);
             this.guaranteeMonth_textBox.TabIndex = 10;
+            this.guaranteeMonth_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.guaranteeMonth_textBox_Validating);
             // 
             // workingHours_textBox
             // 
@@ -292,6 +300,7 @@
             this.workingHours_textBox.Name = "workingHours_textBox";
             this.workingHours_textBox.Size = new System.Drawing.Size(206, 23);
             this.workingHours_textBox.TabIndex = 9;
+            this.workingHours_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.workingHours_textBox_Validating);
             // 
             // dataTranmissionRange_textBox
             // 
@@ -300,6 +309,7 @@
             this.dataTranmissionRange_textBox.Name = "dataTranmissionRange_textBox";
             this.dataTranmissionRange_textBox.Size = new System.Drawing.Size(206, 23);
             this.dataTranmissionRange_textBox.TabIndex = 8;
+            this.dataTranmissionRange_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.dataTranmissionRange_textBox_Validating);
             // 
             // save_button
             // 

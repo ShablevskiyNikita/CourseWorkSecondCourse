@@ -105,7 +105,7 @@ namespace CourseWork
         private void delete_button_Click(object sender, EventArgs e)
         {
             int selectedIndex = devices_listView.FocusedItem.Index;
-            DialogResult result = MessageBox.Show("Дійсно бажаєте видалити информацію про девайc?\n\nІнформацію буде не можливо відновити", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Дійсно бажаєте видалити информацію про девайc?\n\nІнформацію буде не можливо відновити", "Підвтердження дії", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {               
                 devicesList.RemoveAt(selectedIndex);
@@ -264,7 +264,16 @@ namespace CourseWork
 
         private void save_button_Click(object sender, EventArgs e)
         {
-            CommunicationDevice.WriteDevicesToFile("devices.xml", devicesList);
+            try
+            {
+                CommunicationDevice.WriteDevicesToFile("devices.xml", devicesList);
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show("Помилка збереження, спробуйте ще раз", $"{exception.Message}");
+                return;
+            }
+            MessageBox.Show("Дані були успішно збережені!", "Збереження");
         }
 
         private void info_button_Click(object sender, EventArgs e)

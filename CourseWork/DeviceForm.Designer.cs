@@ -317,7 +317,7 @@
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(87, 31);
             this.save_button.TabIndex = 9;
-            this.save_button.Text = "Save";
+            this.save_button.Text = "Зберегти";
             this.save_button.UseVisualStyleBackColor = true;
             this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
@@ -327,7 +327,7 @@
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(87, 31);
             this.cancel_button.TabIndex = 10;
-            this.cancel_button.Text = "Cancel";
+            this.cancel_button.Text = "Відмінити дію";
             this.cancel_button.UseVisualStyleBackColor = true;
             this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 

@@ -173,7 +173,7 @@ namespace CourseWork.Models
 
         public override string ToString()
         {
-            return $"Бренд: {_brand}, Модель: {_model}, Гарантія: {_guaranteeMonth}, Вага: {_weight} кг, Частота сигналу: {_frequency} Гц, Ціна: {_price} грн ";
+            return $"Бренд: {_brand}, Модель: {_model}, Гарантія: {_guaranteeMonth}  місяців, Вага: {_weight} кг, Частота сигналу: {_frequency} Гц, Ціна: {_price} грн ";
         }
     }
 }

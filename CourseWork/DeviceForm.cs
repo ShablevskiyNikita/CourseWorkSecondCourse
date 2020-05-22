@@ -90,7 +90,7 @@ namespace CourseWork
             }
 
             if (creatingNewElement)
-            {
+            {          
                 deviceInfo = CreateDeviceInstance();
                 if(newDeviceIconLink != null)
                 {
@@ -122,7 +122,7 @@ namespace CourseWork
                 && description_textBox.Text != "" && price_textBox.Text != ""
                 && dataTranmissionRange_textBox.Text != "" && workingHours_textBox.Text != ""
                 && guaranteeMonth_textBox.Text != "" && guaranteeMonth_textBox.Text != ""
-                && signalFrequency_textBox.Text != "" && weight_textBox.Text != ""; 
+                && signalFrequency_textBox.Text != "" && weight_textBox.Text != "" && (creatingNewElement ? communicationTypes_listBox1.SelectedItem != null : true); 
         }
 
         private void cancel_button_Click(object sender, EventArgs e)
@@ -144,7 +144,7 @@ namespace CourseWork
         }
 
         private CommunicationDevice CreateDeviceInstance()
-        {
+        {          
             string selectedType = communicationTypes_listBox1.SelectedItem.ToString();
 
             switch(selectedType)

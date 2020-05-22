@@ -395,6 +395,7 @@
             this.weightMax_textBox.Name = "weightMax_textBox";
             this.weightMax_textBox.Size = new System.Drawing.Size(81, 23);
             this.weightMax_textBox.TabIndex = 20;
+            this.weightMax_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.weightMax_textBox_Validating);
             // 
             // dataTranmissionRangeMax_textBox
             // 
@@ -403,6 +404,7 @@
             this.dataTranmissionRangeMax_textBox.Name = "dataTranmissionRangeMax_textBox";
             this.dataTranmissionRangeMax_textBox.Size = new System.Drawing.Size(81, 23);
             this.dataTranmissionRangeMax_textBox.TabIndex = 19;
+            this.dataTranmissionRangeMax_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.dataTranmissionRangeMax_textBox_Validating);
             // 
             // workingHoursMax_textBox
             // 
@@ -411,6 +413,7 @@
             this.workingHoursMax_textBox.Name = "workingHoursMax_textBox";
             this.workingHoursMax_textBox.Size = new System.Drawing.Size(81, 23);
             this.workingHoursMax_textBox.TabIndex = 18;
+            this.workingHoursMax_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.workingHoursMax_textBox_Validating);
             // 
             // search_button
             // 
@@ -458,6 +461,7 @@
             this.workingHoursMin_textBox.Name = "workingHoursMin_textBox";
             this.workingHoursMin_textBox.Size = new System.Drawing.Size(81, 23);
             this.workingHoursMin_textBox.TabIndex = 14;
+            this.workingHoursMin_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.workingHoursMin_textBox_Validating);
             // 
             // label15
             // 
@@ -486,6 +490,7 @@
             this.dataTranmissionRangeMin_textBox.Name = "dataTranmissionRangeMin_textBox";
             this.dataTranmissionRangeMin_textBox.Size = new System.Drawing.Size(81, 23);
             this.dataTranmissionRangeMin_textBox.TabIndex = 11;
+            this.dataTranmissionRangeMin_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.dataTranmissionRangeMin_textBox_Validating);
             // 
             // label13
             // 
@@ -514,6 +519,7 @@
             this.priceMax_textBox.Name = "priceMax_textBox";
             this.priceMax_textBox.Size = new System.Drawing.Size(78, 23);
             this.priceMax_textBox.TabIndex = 8;
+            this.priceMax_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.priceMax_textBox_Validating);
             // 
             // priceMin_textBox
             // 
@@ -522,6 +528,7 @@
             this.priceMin_textBox.Name = "priceMin_textBox";
             this.priceMin_textBox.Size = new System.Drawing.Size(78, 23);
             this.priceMin_textBox.TabIndex = 7;
+            this.priceMin_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.priceMin_textBox_Validating);
             // 
             // label11
             // 
@@ -550,6 +557,7 @@
             this.weightMin_textBox.Name = "weightMin_textBox";
             this.weightMin_textBox.Size = new System.Drawing.Size(81, 23);
             this.weightMin_textBox.TabIndex = 4;
+            this.weightMin_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.weightMin_textBox_Validating);
             // 
             // model_textBox
             // 

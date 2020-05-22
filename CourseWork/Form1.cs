@@ -289,7 +289,112 @@ namespace CourseWork
                 "1. Створення(додавання) нового девайс у систему\n" +
                 "2. Редагування інформації про створений девайс\n" +
                 "3. Видалення девайса із системи\n" +
+                "4. Збереження усіх даних у XML файл\n" +
                 "Для зручності у використанні на лівій стороні початкової вкладки наявні фільтра для пошуку девайсів за відповідними критеріями",  "Інформація про програму");
+        }
+
+        private void dataTranmissionRangeMin_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\d+$|^\d+,\d+$");
+            if (!regexGroupFormat.IsMatch(dataTranmissionRangeMin_textBox.Text))
+            {
+                if(dataTranmissionRangeMin_textBox.Text != "")
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Ви повинні ввести чисо, вигляду 100 або 100,10");
+                }               
+            }
+        }
+
+        private void dataTranmissionRangeMax_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\d+$|^\d+,\d+$");
+            if (!regexGroupFormat.IsMatch(dataTranmissionRangeMax_textBox.Text))
+            {
+                if(dataTranmissionRangeMin_textBox.Text != "")
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Ви повинні ввести чисо, вигляду 100 або 100,10");
+                }
+            }
+        }
+
+        private void workingHoursMin_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\d+$|^\d+,\d+$");
+            if (!regexGroupFormat.IsMatch(workingHoursMin_textBox.Text))
+            {
+                if(workingHoursMin_textBox.Text != "")
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Ви повинні ввести чисо, вигляду 100 або 100,10"); 
+                }                
+            }
+        }
+
+        private void workingHoursMax_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\d+$|^\d+,\d+$");
+            if (!regexGroupFormat.IsMatch(workingHoursMax_textBox.Text))
+            {
+                if(workingHoursMax_textBox.Text != "")
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Ви повинні ввести чисо, вигляду 100 або 100,10");
+                }               
+            }
+        }
+
+        private void priceMin_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\d+$|^\d+,\d+$");
+            if (!regexGroupFormat.IsMatch(priceMin_textBox.Text))
+            {
+                if (priceMin_textBox.Text != "")
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Ви повинні ввести чисо, вигляду 100 або 100,10");
+                }
+            }
+        }
+
+        private void priceMax_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\d+$|^\d+,\d+$");
+            if (!regexGroupFormat.IsMatch(priceMax_textBox.Text))
+            {
+                if(priceMax_textBox.Text != "")
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Ви повинні ввести чисо, вигляду 100 або 100,10");
+                }
+            }
+        }
+
+        private void weightMin_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\d+$|^\d+,\d+$");
+            if (!regexGroupFormat.IsMatch(weightMin_textBox.Text))
+            {
+                if(weightMin_textBox.Text != "")
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Ви повинні ввести чисо, вигляду 100 або 100,10");
+                }
+            }
+        }
+
+        private void weightMax_textBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regexGroupFormat = new Regex(@"^\d+$|^\d+,\d+$");
+            if (!regexGroupFormat.IsMatch(weightMax_textBox.Text))
+            {
+                if(weightMax_textBox.Text != "")
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Ви повинні ввести чисо, вигляду 100 або 100,10");
+                }
+            }
         }
     }
 }

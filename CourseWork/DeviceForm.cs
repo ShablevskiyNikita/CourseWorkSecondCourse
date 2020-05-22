@@ -264,5 +264,25 @@ namespace CourseWork
                 MessageBox.Show("Ви повинні обрати тип девайсу!");
             }
         }
+
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == 0x10) // The upper right "X" was clicked
+            {
+                AutoValidate = AutoValidate.Disable; //Deactivate all validations
+            }
+            base.WndProc(ref m);
+        }
+
+        // To capture the "Esc" key
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                AutoValidate = AutoValidate.Disable;
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
+        }
     }
 }

@@ -10,6 +10,8 @@ namespace CourseWork.Models
 {
     public class SatelliteDevice : CommunicationDevice
     {
+        public static string TypeDescription = "Тип пристроїв портативних чи стаціонарних пристроїв, що передають інформацію безпосередньо через супутникову мережу, створену телекомунікаційними супутниками.\n" +
+            "Залежно від оператора зв'язку, зоною покриття супутникової мережі може бути або вся Земля — глобальне покриття, або обмежені окремі райони земної поверхні — регіональне покриття.\n";           
         public readonly string defaultImagePath = @"../../images/default/satellite.png";
         private string _brand;
         private string _model;

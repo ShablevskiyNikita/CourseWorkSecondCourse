@@ -10,6 +10,9 @@ namespace CourseWork.Models
 {
     public class MobileDevice : CommunicationDevice
     {
+        public static string TypeDescription = "Тип пристроїів, що підтримують мобі́льний зв'язо́к (рухо́мий зв'язо́к) — зв'язок із застосуванням радіотехнологій,\n" +
+            "під час якого кінцеве обладнання хоча б одного із споживачів може вільно переміщуватися в межах телекомунікаційної мережі,\n" +
+            "зберігаючи єдиний унікальний ідентифікаційний номер мобільної станції.";
         public readonly string defaultImagePath = @"../../images/default/mobile.png";
         private string _brand;
         private string _model;

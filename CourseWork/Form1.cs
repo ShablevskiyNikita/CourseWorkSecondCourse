@@ -31,7 +31,7 @@ namespace CourseWork
             TOOLTIP.SetToolTip(delete_button, "Видалити девайс");
             TOOLTIP.SetToolTip(clearFilters_button, "Видалити девайс");
             TOOLTIP.SetToolTip(save_button, "Зберегти зміни");
-
+            TOOLTIP.SetToolTip(info_button, "Інформація про програму");
 
             LoadListViewData(null);
         }
@@ -122,27 +122,27 @@ namespace CourseWork
 
         private void bluetoothDevice_button_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(BluetoothDevice.TypeDescription, "Bluetooth пристрої");
         }
 
         private void mobileDevices_button_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(MobileDevice.TypeDescription, "Мобільні пристрої");
         }
 
         private void radioDevices_button_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(RadioDevice.TypeDescription, "Радіо пристірої");
         }
 
         private void satelliteDevices_button_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(SatelliteDevice.TypeDescription, "Супутникові пристрої");
         }
 
         private void wifiDevices_button_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(WiFiDevice.TypeDescription, "WiFi пристрої");
         }
 
         private void search_button_Click(object sender, EventArgs e)
@@ -265,6 +265,22 @@ namespace CourseWork
         private void save_button_Click(object sender, EventArgs e)
         {
             CommunicationDevice.WriteDevicesToFile("devices.xml", devicesList);
+        }
+
+        private void info_button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Даний програмний продукт виступає як система обліку пристроїв з безпровідними засобами комунікації\n" +
+                "На даному етапі програма підтримує наявність пристроїв із такими типами комунікації:\n" +
+                "1. Bluetooth\n" +
+                "2. WiFI\n" +
+                "3. Радіо(Radio)\n" +
+                "4. Satellite(супутниковий)\n" +
+                "5. Мобільний(Mobile)\n\n" +
+                "Даний програмний продукт підтримує такі функції:\n" +
+                "1. Створення(додавання) нового девайс у систему\n" +
+                "2. Редагування інформації про створений девайс\n" +
+                "3. Видалення девайса із системи\n" +
+                "Для зручності у використанні на лівій стороні початкової вкладки наявні фільтра для пошуку девайсів за відповідними критеріями",  "Інформація про програму");
         }
     }
 }

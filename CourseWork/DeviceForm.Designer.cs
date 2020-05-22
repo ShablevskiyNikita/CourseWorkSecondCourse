@@ -40,20 +40,20 @@
             this.description_textBox = new System.Windows.Forms.TextBox();
             this.price_textBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.communicationTypes_listBox1 = new System.Windows.Forms.ListBox();
             this.communicationType_label = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.weight_textBox = new System.Windows.Forms.TextBox();
             this.signalFrequency_textBox = new System.Windows.Forms.TextBox();
             this.guaranteeMonth_textBox = new System.Windows.Forms.TextBox();
             this.workingHours_textBox = new System.Windows.Forms.TextBox();
             this.dataTranmissionRange_textBox = new System.Windows.Forms.TextBox();
             this.save_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
-            this.communicationTypes_listBox1 = new System.Windows.Forms.ListBox();
-            this.weight_textBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -185,6 +185,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox2_Paint);
             // 
+            // communicationTypes_listBox1
+            // 
+            this.communicationTypes_listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.communicationTypes_listBox1.FormattingEnabled = true;
+            this.communicationTypes_listBox1.ItemHeight = 20;
+            this.communicationTypes_listBox1.Items.AddRange(new object[] {
+            "Bluetooth",
+            "WiFi",
+            "Satellite",
+            "Mobile",
+            "Radio"});
+            this.communicationTypes_listBox1.Location = new System.Drawing.Point(543, 131);
+            this.communicationTypes_listBox1.Name = "communicationTypes_listBox1";
+            this.communicationTypes_listBox1.Size = new System.Drawing.Size(206, 24);
+            this.communicationTypes_listBox1.TabIndex = 20;
+            // 
             // communicationType_label
             // 
             this.communicationType_label.AutoSize = true;
@@ -245,6 +261,14 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Радіус дії(м):";
             // 
+            // weight_textBox
+            // 
+            this.weight_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.weight_textBox.Location = new System.Drawing.Point(274, 132);
+            this.weight_textBox.Name = "weight_textBox";
+            this.weight_textBox.Size = new System.Drawing.Size(206, 23);
+            this.weight_textBox.TabIndex = 12;
+            // 
             // signalFrequency_textBox
             // 
             this.signalFrequency_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -297,30 +321,6 @@
             this.cancel_button.UseVisualStyleBackColor = true;
             this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
-            // communicationTypes_listBox1
-            // 
-            this.communicationTypes_listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.communicationTypes_listBox1.FormattingEnabled = true;
-            this.communicationTypes_listBox1.ItemHeight = 20;
-            this.communicationTypes_listBox1.Items.AddRange(new object[] {
-            "Bluetooth",
-            "WiFi",
-            "Satellite",
-            "Mobile",
-            "Radio"});
-            this.communicationTypes_listBox1.Location = new System.Drawing.Point(543, 131);
-            this.communicationTypes_listBox1.Name = "communicationTypes_listBox1";
-            this.communicationTypes_listBox1.Size = new System.Drawing.Size(206, 24);
-            this.communicationTypes_listBox1.TabIndex = 20;
-            // 
-            // weight_textBox
-            // 
-            this.weight_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.weight_textBox.Location = new System.Drawing.Point(274, 132);
-            this.weight_textBox.Name = "weight_textBox";
-            this.weight_textBox.Size = new System.Drawing.Size(206, 23);
-            this.weight_textBox.TabIndex = 12;
-            // 
             // DeviceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,7 +332,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.addImage_button);
             this.Name = "DeviceForm";
-            this.Text = "DeviceForm";
+            this.Text = "Додати новий девайс";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

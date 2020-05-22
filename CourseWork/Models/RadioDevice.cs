@@ -10,6 +10,8 @@ namespace CourseWork.Models
 {
     public class RadioDevice : CommunicationDevice
     {
+        public static string TypeDescription = "Тип пристроїв, що призначені для приймання електромагнітних хвиль радіодіапазону (тобто з довжиною хвилі від декількох тисяч метрів до частин міліметра)" +
+                                               "з наступним перетворенням інформації, яка у них зберігається до вигляду, в якому вона може бути використана.";
         public  string defaultImagePath = @"../../images/default/radio.png";
         private string _brand;
         private string _model;

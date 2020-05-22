@@ -48,6 +48,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.clearFilters_button = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.weightMax_textBox = new System.Windows.Forms.TextBox();
+            this.dataTranmissionRangeMax_textBox = new System.Windows.Forms.TextBox();
+            this.workingHoursMax_textBox = new System.Windows.Forms.TextBox();
             this.search_button = new System.Windows.Forms.Button();
             this.communicationTypes_checkedListBox = new System.Windows.Forms.CheckedListBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -66,17 +76,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.brand_textBox = new System.Windows.Forms.TextBox();
-            this.workingHoursMax_textBox = new System.Windows.Forms.TextBox();
-            this.dataTranmissionRangeMax_textBox = new System.Windows.Forms.TextBox();
-            this.weightMax_textBox = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.clearFilters_button = new System.Windows.Forms.Button();
             this.save_button = new System.Windows.Forms.Button();
+            this.info_button = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +90,7 @@
             this.add_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.add_button.FlatAppearance.BorderSize = 0;
             this.add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_button.Location = new System.Drawing.Point(760, 629);
+            this.add_button.Location = new System.Drawing.Point(760, 642);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(50, 50);
             this.add_button.TabIndex = 1;
@@ -104,7 +105,7 @@
             this.edit_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.edit_button.FlatAppearance.BorderSize = 0;
             this.edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.edit_button.Location = new System.Drawing.Point(839, 629);
+            this.edit_button.Location = new System.Drawing.Point(838, 641);
             this.edit_button.Name = "edit_button";
             this.edit_button.Size = new System.Drawing.Size(50, 50);
             this.edit_button.TabIndex = 2;
@@ -119,7 +120,7 @@
             this.delete_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delete_button.FlatAppearance.BorderSize = 0;
             this.delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_button.Location = new System.Drawing.Point(907, 629);
+            this.delete_button.Location = new System.Drawing.Point(907, 641);
             this.delete_button.Name = "delete_button";
             this.delete_button.Size = new System.Drawing.Size(50, 50);
             this.delete_button.TabIndex = 3;
@@ -312,6 +313,105 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
+            // clearFilters_button
+            // 
+            this.clearFilters_button.BackColor = System.Drawing.Color.White;
+            this.clearFilters_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("clearFilters_button.BackgroundImage")));
+            this.clearFilters_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.clearFilters_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearFilters_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.clearFilters_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearFilters_button.Location = new System.Drawing.Point(36, 641);
+            this.clearFilters_button.Name = "clearFilters_button";
+            this.clearFilters_button.Size = new System.Drawing.Size(30, 26);
+            this.clearFilters_button.TabIndex = 27;
+            this.clearFilters_button.UseVisualStyleBackColor = false;
+            this.clearFilters_button.Click += new System.EventHandler(this.clearFilters_button_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.Location = new System.Drawing.Point(159, 181);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(25, 13);
+            this.label22.TabIndex = 26;
+            this.label22.Text = "До:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(160, 271);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(25, 13);
+            this.label21.TabIndex = 25;
+            this.label21.Text = "До:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(163, 581);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(25, 13);
+            this.label20.TabIndex = 24;
+            this.label20.Text = "До:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(36, 181);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(25, 13);
+            this.label19.TabIndex = 23;
+            this.label19.Text = "Від:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(36, 271);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(25, 13);
+            this.label18.TabIndex = 22;
+            this.label18.Text = "Від:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(36, 581);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(25, 13);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "Від:";
+            // 
+            // weightMax_textBox
+            // 
+            this.weightMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.weightMax_textBox.Location = new System.Drawing.Point(163, 601);
+            this.weightMax_textBox.Name = "weightMax_textBox";
+            this.weightMax_textBox.Size = new System.Drawing.Size(81, 23);
+            this.weightMax_textBox.TabIndex = 20;
+            // 
+            // dataTranmissionRangeMax_textBox
+            // 
+            this.dataTranmissionRangeMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataTranmissionRangeMax_textBox.Location = new System.Drawing.Point(160, 201);
+            this.dataTranmissionRangeMax_textBox.Name = "dataTranmissionRangeMax_textBox";
+            this.dataTranmissionRangeMax_textBox.Size = new System.Drawing.Size(81, 23);
+            this.dataTranmissionRangeMax_textBox.TabIndex = 19;
+            // 
+            // workingHoursMax_textBox
+            // 
+            this.workingHoursMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workingHoursMax_textBox.Location = new System.Drawing.Point(160, 291);
+            this.workingHoursMax_textBox.Name = "workingHoursMax_textBox";
+            this.workingHoursMax_textBox.Size = new System.Drawing.Size(81, 23);
+            this.workingHoursMax_textBox.TabIndex = 18;
+            // 
             // search_button
             // 
             this.search_button.BackColor = System.Drawing.Color.White;
@@ -487,105 +587,6 @@
             this.brand_textBox.Size = new System.Drawing.Size(208, 23);
             this.brand_textBox.TabIndex = 0;
             // 
-            // workingHoursMax_textBox
-            // 
-            this.workingHoursMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.workingHoursMax_textBox.Location = new System.Drawing.Point(160, 291);
-            this.workingHoursMax_textBox.Name = "workingHoursMax_textBox";
-            this.workingHoursMax_textBox.Size = new System.Drawing.Size(81, 23);
-            this.workingHoursMax_textBox.TabIndex = 18;
-            // 
-            // dataTranmissionRangeMax_textBox
-            // 
-            this.dataTranmissionRangeMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataTranmissionRangeMax_textBox.Location = new System.Drawing.Point(160, 201);
-            this.dataTranmissionRangeMax_textBox.Name = "dataTranmissionRangeMax_textBox";
-            this.dataTranmissionRangeMax_textBox.Size = new System.Drawing.Size(81, 23);
-            this.dataTranmissionRangeMax_textBox.TabIndex = 19;
-            // 
-            // weightMax_textBox
-            // 
-            this.weightMax_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.weightMax_textBox.Location = new System.Drawing.Point(163, 601);
-            this.weightMax_textBox.Name = "weightMax_textBox";
-            this.weightMax_textBox.Size = new System.Drawing.Size(81, 23);
-            this.weightMax_textBox.TabIndex = 20;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(36, 581);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(25, 13);
-            this.label17.TabIndex = 21;
-            this.label17.Text = "Від:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(36, 271);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(25, 13);
-            this.label18.TabIndex = 22;
-            this.label18.Text = "Від:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(36, 181);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(25, 13);
-            this.label19.TabIndex = 23;
-            this.label19.Text = "Від:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(163, 581);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(25, 13);
-            this.label20.TabIndex = 24;
-            this.label20.Text = "До:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(160, 271);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(25, 13);
-            this.label21.TabIndex = 25;
-            this.label21.Text = "До:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(159, 181);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(25, 13);
-            this.label22.TabIndex = 26;
-            this.label22.Text = "До:";
-            // 
-            // clearFilters_button
-            // 
-            this.clearFilters_button.BackColor = System.Drawing.Color.White;
-            this.clearFilters_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("clearFilters_button.BackgroundImage")));
-            this.clearFilters_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.clearFilters_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearFilters_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.clearFilters_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearFilters_button.Location = new System.Drawing.Point(36, 641);
-            this.clearFilters_button.Name = "clearFilters_button";
-            this.clearFilters_button.Size = new System.Drawing.Size(30, 26);
-            this.clearFilters_button.TabIndex = 27;
-            this.clearFilters_button.UseVisualStyleBackColor = false;
-            this.clearFilters_button.Click += new System.EventHandler(this.clearFilters_button_Click);
-            // 
             // save_button
             // 
             this.save_button.BackColor = System.Drawing.SystemColors.Control;
@@ -594,18 +595,34 @@
             this.save_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.save_button.FlatAppearance.BorderSize = 0;
             this.save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save_button.Location = new System.Drawing.Point(883, 135);
+            this.save_button.Location = new System.Drawing.Point(898, 135);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(74, 45);
             this.save_button.TabIndex = 18;
             this.save_button.UseVisualStyleBackColor = false;
             this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
+            // info_button
+            // 
+            this.info_button.BackColor = System.Drawing.SystemColors.Control;
+            this.info_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("info_button.BackgroundImage")));
+            this.info_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.info_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.info_button.FlatAppearance.BorderSize = 0;
+            this.info_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.info_button.Location = new System.Drawing.Point(928, 12);
+            this.info_button.Name = "info_button";
+            this.info_button.Size = new System.Drawing.Size(37, 31);
+            this.info_button.TabIndex = 19;
+            this.info_button.UseVisualStyleBackColor = false;
+            this.info_button.Click += new System.EventHandler(this.info_button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(977, 704);
+            this.Controls.Add(this.info_button);
             this.Controls.Add(this.save_button);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
@@ -682,6 +699,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button clearFilters_button;
         private System.Windows.Forms.Button save_button;
+        private System.Windows.Forms.Button info_button;
     }
 }
 

@@ -10,6 +10,9 @@ namespace CourseWork.Models
 {
     public class BluetoothDevice : CommunicationDevice
     {
+        public static string TypeDescription = "Тип пристроїв, що підтримують інтерфейс Bluetooth, що дає змогу передавати як голос (зі швидкістю 64 Кбіт/с), так і дані.\n" +
+            "Для передачі даних можуть бути використані асиметричний (721 Кбіт/с в одному напрямку і 57,6 Кбіт/с в іншому) та симетричний (432,6 Кбіт/с в обох напрямках) методи.\n" +
+            "Працюючи на частоті 2.4 ГГц, прийомопередавач (Bluetooth-chip) дає змогу встановлювати зв'язок у межах 10 або 100 метрів.\n";
         public readonly string defaultImagePath = @"../../images/default/bluetooth.png";
         private string _brand;
         private string _model;

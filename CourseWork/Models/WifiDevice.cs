@@ -10,6 +10,9 @@ namespace CourseWork.Models
 {
     public class WiFiDevice : CommunicationDevice
     {
+        public static string TypeDescription = "Тип пристроїв, що підтримують технологію WiFI - Wi-Fi - це сучасна та перспективна бездротова технологія, яка використовує радіоканали для передачі даних.\n" +
+            "Дана технологія запропонувала наявні точки доступу / маршрутизатора Wi-Fi (стандарти 802.11a / b / g / n), які забезпечують стабільний доступ до мереж з неконтрольованої області радіусом\n" +
+            " до 45 метрів у помешканні та 90 метрів у відкритому просторі (радіус залежить від багатьох людей) условий і у вашому випадку може змінитися).";
         public readonly string defaultImagePath = @"../../images/default/wifi.png";
         private string _brand;
         private string _model;

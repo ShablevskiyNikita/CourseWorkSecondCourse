@@ -58,25 +58,31 @@ namespace CourseWork
 
         private void addImage_button_Click(object sender, EventArgs e)
         {
+            // Створюємо екземпляр класу, для вибору файлу
             OpenFileDialog openFile = new OpenFileDialog();
+            // Задаємо параметри для вибору файлу
             openFile.Title = "Select a Image";
             openFile.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-
-
+            // відкриваємо вікно для вибору файлу
             if (openFile.ShowDialog() == DialogResult.OK)
             {
+                // Перевіряємо чи ми створюємо новий прилад, чи редагуємо створений
                 if (creatingNewElement)
                 {
+                    // Зберегаємо шлях до файлу
                     newDeviceIconLink = openFile.FileName;
                 }
                 else
                 {
+                    // Зберегаємо шлях до файлу
                     deviceInfo.IconPath = openFile.FileName;
                 }
+                // Змінюємо вигляд зображення приладу
                 addImage_button.BackgroundImage = Image.FromFile(openFile.FileName);
             }
             else
             {
+                // Знищуємо екземпляр классу
                 openFile.Dispose();
             }
         }

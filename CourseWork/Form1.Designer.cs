@@ -90,10 +90,10 @@
             this.add_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.add_button.FlatAppearance.BorderSize = 0;
             this.add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_button.Location = new System.Drawing.Point(760, 642);
+            this.add_button.Location = new System.Drawing.Point(818, 642);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(50, 50);
-            this.add_button.TabIndex = 1;
+            this.add_button.TabIndex = 21;
             this.add_button.UseVisualStyleBackColor = false;
             this.add_button.Click += new System.EventHandler(this.add_button_Click);
             // 
@@ -105,10 +105,10 @@
             this.edit_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.edit_button.FlatAppearance.BorderSize = 0;
             this.edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.edit_button.Location = new System.Drawing.Point(838, 641);
+            this.edit_button.Location = new System.Drawing.Point(898, 641);
             this.edit_button.Name = "edit_button";
             this.edit_button.Size = new System.Drawing.Size(50, 50);
-            this.edit_button.TabIndex = 2;
+            this.edit_button.TabIndex = 22;
             this.edit_button.UseVisualStyleBackColor = false;
             this.edit_button.Click += new System.EventHandler(this.edit_button_Click);
             // 
@@ -120,10 +120,10 @@
             this.delete_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delete_button.FlatAppearance.BorderSize = 0;
             this.delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_button.Location = new System.Drawing.Point(907, 641);
+            this.delete_button.Location = new System.Drawing.Point(969, 641);
             this.delete_button.Name = "delete_button";
             this.delete_button.Size = new System.Drawing.Size(50, 50);
-            this.delete_button.TabIndex = 3;
+            this.delete_button.TabIndex = 23;
             this.delete_button.UseVisualStyleBackColor = false;
             this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
             // 
@@ -147,8 +147,8 @@
             this.devices_listView.Location = new System.Drawing.Point(351, 186);
             this.devices_listView.MultiSelect = false;
             this.devices_listView.Name = "devices_listView";
-            this.devices_listView.Size = new System.Drawing.Size(606, 437);
-            this.devices_listView.TabIndex = 5;
+            this.devices_listView.Size = new System.Drawing.Size(668, 437);
+            this.devices_listView.TabIndex = 20;
             this.devices_listView.TileSize = new System.Drawing.Size(500, 70);
             this.devices_listView.UseCompatibleStateImageBehavior = false;
             this.devices_listView.View = System.Windows.Forms.View.Tile;
@@ -172,7 +172,7 @@
             this.bluetoothDevice_button.Location = new System.Drawing.Point(351, 44);
             this.bluetoothDevice_button.Name = "bluetoothDevice_button";
             this.bluetoothDevice_button.Size = new System.Drawing.Size(70, 54);
-            this.bluetoothDevice_button.TabIndex = 6;
+            this.bluetoothDevice_button.TabIndex = 13;
             this.bluetoothDevice_button.UseVisualStyleBackColor = true;
             this.bluetoothDevice_button.Click += new System.EventHandler(this.bluetoothDevice_button_Click);
             // 
@@ -183,7 +183,7 @@
             this.mobileDevices_button.Location = new System.Drawing.Point(448, 44);
             this.mobileDevices_button.Name = "mobileDevices_button";
             this.mobileDevices_button.Size = new System.Drawing.Size(70, 54);
-            this.mobileDevices_button.TabIndex = 7;
+            this.mobileDevices_button.TabIndex = 14;
             this.mobileDevices_button.UseVisualStyleBackColor = true;
             this.mobileDevices_button.Click += new System.EventHandler(this.mobileDevices_button_Click);
             // 
@@ -194,7 +194,7 @@
             this.radioDevices_button.Location = new System.Drawing.Point(550, 44);
             this.radioDevices_button.Name = "radioDevices_button";
             this.radioDevices_button.Size = new System.Drawing.Size(70, 54);
-            this.radioDevices_button.TabIndex = 8;
+            this.radioDevices_button.TabIndex = 15;
             this.radioDevices_button.UseVisualStyleBackColor = true;
             this.radioDevices_button.Click += new System.EventHandler(this.radioDevices_button_Click);
             // 
@@ -205,7 +205,7 @@
             this.satelliteDevices_button.Location = new System.Drawing.Point(654, 44);
             this.satelliteDevices_button.Name = "satelliteDevices_button";
             this.satelliteDevices_button.Size = new System.Drawing.Size(70, 54);
-            this.satelliteDevices_button.TabIndex = 9;
+            this.satelliteDevices_button.TabIndex = 16;
             this.satelliteDevices_button.UseVisualStyleBackColor = true;
             this.satelliteDevices_button.Click += new System.EventHandler(this.satelliteDevices_button_Click);
             // 
@@ -216,7 +216,7 @@
             this.wifiDevices_button.Location = new System.Drawing.Point(760, 44);
             this.wifiDevices_button.Name = "wifiDevices_button";
             this.wifiDevices_button.Size = new System.Drawing.Size(70, 54);
-            this.wifiDevices_button.TabIndex = 10;
+            this.wifiDevices_button.TabIndex = 17;
             this.wifiDevices_button.UseVisualStyleBackColor = true;
             this.wifiDevices_button.Click += new System.EventHandler(this.wifiDevices_button_Click);
             // 
@@ -324,7 +324,7 @@
             this.clearFilters_button.Location = new System.Drawing.Point(36, 641);
             this.clearFilters_button.Name = "clearFilters_button";
             this.clearFilters_button.Size = new System.Drawing.Size(30, 26);
-            this.clearFilters_button.TabIndex = 27;
+            this.clearFilters_button.TabIndex = 11;
             this.clearFilters_button.UseVisualStyleBackColor = false;
             this.clearFilters_button.Click += new System.EventHandler(this.clearFilters_button_Click);
             // 
@@ -394,7 +394,7 @@
             this.weightMax_textBox.Location = new System.Drawing.Point(163, 601);
             this.weightMax_textBox.Name = "weightMax_textBox";
             this.weightMax_textBox.Size = new System.Drawing.Size(81, 23);
-            this.weightMax_textBox.TabIndex = 20;
+            this.weightMax_textBox.TabIndex = 10;
             this.weightMax_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.weightMax_textBox_Validating);
             // 
             // dataTranmissionRangeMax_textBox
@@ -403,7 +403,7 @@
             this.dataTranmissionRangeMax_textBox.Location = new System.Drawing.Point(160, 201);
             this.dataTranmissionRangeMax_textBox.Name = "dataTranmissionRangeMax_textBox";
             this.dataTranmissionRangeMax_textBox.Size = new System.Drawing.Size(81, 23);
-            this.dataTranmissionRangeMax_textBox.TabIndex = 19;
+            this.dataTranmissionRangeMax_textBox.TabIndex = 3;
             this.dataTranmissionRangeMax_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.dataTranmissionRangeMax_textBox_Validating);
             // 
             // workingHoursMax_textBox
@@ -412,7 +412,7 @@
             this.workingHoursMax_textBox.Location = new System.Drawing.Point(160, 291);
             this.workingHoursMax_textBox.Name = "workingHoursMax_textBox";
             this.workingHoursMax_textBox.Size = new System.Drawing.Size(81, 23);
-            this.workingHoursMax_textBox.TabIndex = 18;
+            this.workingHoursMax_textBox.TabIndex = 5;
             this.workingHoursMax_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.workingHoursMax_textBox_Validating);
             // 
             // search_button
@@ -426,7 +426,7 @@
             this.search_button.Location = new System.Drawing.Point(211, 641);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(30, 26);
-            this.search_button.TabIndex = 17;
+            this.search_button.TabIndex = 12;
             this.search_button.UseVisualStyleBackColor = false;
             this.search_button.Click += new System.EventHandler(this.search_button_Click);
             // 
@@ -442,7 +442,7 @@
             this.communicationTypes_checkedListBox.Location = new System.Drawing.Point(36, 361);
             this.communicationTypes_checkedListBox.Name = "communicationTypes_checkedListBox";
             this.communicationTypes_checkedListBox.Size = new System.Drawing.Size(205, 79);
-            this.communicationTypes_checkedListBox.TabIndex = 16;
+            this.communicationTypes_checkedListBox.TabIndex = 6;
             // 
             // label16
             // 
@@ -460,7 +460,7 @@
             this.workingHoursMin_textBox.Location = new System.Drawing.Point(36, 291);
             this.workingHoursMin_textBox.Name = "workingHoursMin_textBox";
             this.workingHoursMin_textBox.Size = new System.Drawing.Size(81, 23);
-            this.workingHoursMin_textBox.TabIndex = 14;
+            this.workingHoursMin_textBox.TabIndex = 4;
             this.workingHoursMin_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.workingHoursMin_textBox_Validating);
             // 
             // label15
@@ -489,7 +489,7 @@
             this.dataTranmissionRangeMin_textBox.Location = new System.Drawing.Point(36, 201);
             this.dataTranmissionRangeMin_textBox.Name = "dataTranmissionRangeMin_textBox";
             this.dataTranmissionRangeMin_textBox.Size = new System.Drawing.Size(81, 23);
-            this.dataTranmissionRangeMin_textBox.TabIndex = 11;
+            this.dataTranmissionRangeMin_textBox.TabIndex = 2;
             this.dataTranmissionRangeMin_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.dataTranmissionRangeMin_textBox_Validating);
             // 
             // label13
@@ -556,7 +556,7 @@
             this.weightMin_textBox.Location = new System.Drawing.Point(36, 601);
             this.weightMin_textBox.Name = "weightMin_textBox";
             this.weightMin_textBox.Size = new System.Drawing.Size(81, 23);
-            this.weightMin_textBox.TabIndex = 4;
+            this.weightMin_textBox.TabIndex = 9;
             this.weightMin_textBox.Validating += new System.ComponentModel.CancelEventHandler(this.weightMin_textBox_Validating);
             // 
             // model_textBox
@@ -565,7 +565,7 @@
             this.model_textBox.Location = new System.Drawing.Point(36, 111);
             this.model_textBox.Name = "model_textBox";
             this.model_textBox.Size = new System.Drawing.Size(208, 23);
-            this.model_textBox.TabIndex = 3;
+            this.model_textBox.TabIndex = 1;
             // 
             // label9
             // 
@@ -603,10 +603,10 @@
             this.save_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.save_button.FlatAppearance.BorderSize = 0;
             this.save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save_button.Location = new System.Drawing.Point(898, 135);
+            this.save_button.Location = new System.Drawing.Point(945, 129);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(74, 45);
-            this.save_button.TabIndex = 18;
+            this.save_button.TabIndex = 19;
             this.save_button.UseVisualStyleBackColor = false;
             this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
@@ -618,10 +618,10 @@
             this.info_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.info_button.FlatAppearance.BorderSize = 0;
             this.info_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.info_button.Location = new System.Drawing.Point(928, 12);
+            this.info_button.Location = new System.Drawing.Point(982, 12);
             this.info_button.Name = "info_button";
             this.info_button.Size = new System.Drawing.Size(37, 31);
-            this.info_button.TabIndex = 19;
+            this.info_button.TabIndex = 18;
             this.info_button.UseVisualStyleBackColor = false;
             this.info_button.Click += new System.EventHandler(this.info_button_Click);
             // 
@@ -629,7 +629,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 704);
+            this.ClientSize = new System.Drawing.Size(1031, 704);
+            this.Controls.Add(this.devices_listView);
             this.Controls.Add(this.info_button);
             this.Controls.Add(this.save_button);
             this.Controls.Add(this.groupBox1);
@@ -644,13 +645,13 @@
             this.Controls.Add(this.radioDevices_button);
             this.Controls.Add(this.mobileDevices_button);
             this.Controls.Add(this.bluetoothDevice_button);
-            this.Controls.Add(this.devices_listView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.delete_button);
             this.Controls.Add(this.edit_button);
             this.Controls.Add(this.add_button);
             this.Name = "Form1";
             this.Text = "Система обліку";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

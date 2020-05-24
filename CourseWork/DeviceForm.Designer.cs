@@ -342,7 +342,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.addImage_button);
             this.Name = "DeviceForm";
-            this.Text = "Додати новий девайс";
+            this.Text = "Додати новий прилад";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

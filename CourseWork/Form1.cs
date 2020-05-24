@@ -15,11 +15,13 @@ namespace CourseWork
     public partial class Form1 : Form
     {
         List<CommunicationDevice> devicesList = new List<CommunicationDevice>();
+        bool needToSave = false;
         public Form1()
         {
             InitializeComponent();
             delete_button.Enabled = false;
             edit_button.Enabled = false;
+            
 
             devicesList = CommunicationDevice.ReadDevicesList("devices.xml");
 
@@ -38,19 +40,24 @@ namespace CourseWork
 
         private void LoadListViewData(List<CommunicationDevice> data)
         {
+            // Очищаємо список із приладами
             devices_listView.Clear();
-           
+            // Створюємо список для картинок, що будуть відображені біля опису приладу
             ImageList imageList = new ImageList();
-
+            // Задаємо розміри зображення
             imageList.ImageSize = new Size(60, 60);
-
+            // Задаємо зображення для списку приладів
             devices_listView.LargeImageList = imageList;
 
+            // Якщо мето дне отримав інформацію як аргумент, то у список приладів додаємо весь список, що є
+            // Якщо отримав інформмацію, то виводимо її
             if(data == null)
             {
                 for (int i = 0; i < devicesList.Count; i++)
                 {
+                    // Додаємо зображення по відповідному ключу
                     imageList.Images.Add(i.ToString(), new Bitmap(devicesList[i].IconPath != null ? devicesList[i].IconPath : devicesList[i].DefaultImagePath));
+                    // Додаємо опис приладу, та ключ до відповідного зображення
                     devices_listView.Items.Add(new ListViewItem(devicesList[i].ToString(), i.ToString()));
                 }
             }
@@ -58,7 +65,9 @@ namespace CourseWork
             {
                 for (int i = 0; i < data.Count; i++)
                 {
+                    // Додаємо зображення по відповідному ключу
                     imageList.Images.Add(i.ToString(), new Bitmap(data[i].IconPath != null ? data[i].IconPath : data[i].DefaultImagePath));
+                    // Додаємо опис приладу, та ключ до відповідного зображення
                     devices_listView.Items.Add(new ListViewItem(data[i].ToString(), i.ToString()));
                 }
             }
@@ -73,43 +82,67 @@ namespace CourseWork
 
         private void add_button_Click(object sender, EventArgs e)
         {
+            // Створюємо екземпляр форм, в конструктор передаємо null,  адже збереження буде за допомогою делегату
             DeviceForm deviceEditForm = new DeviceForm(null);
+            // Передаємо посилання на метод збереження
             deviceEditForm.saveNewDeviceInfo = new DeviceForm.SaveDevice(saveNewDevice);
+            // Якщо дані не були збережені, виводимо відповідне повідомлення
+            // Відкриваємо форму
             if (deviceEditForm.ShowDialog() != DialogResult.OK)
             {
                 MessageBox.Show("Дані не були збережені");
+                // ЗАвершуємо роботу методу
+                return;
             }
+            // після додавання елементу, система матиме не збережені зміни
+            needToSave = true;
         }
 
         private void edit_button_Click(object sender, EventArgs e)
         {
-            if(devices_listView.FocusedItem == null)
+            // Перевіряємо чи обрав користувач елемент із списку
+            if (devices_listView.FocusedItem == null)
             {
+                // Виводимо відповідне повідомлення
                 MessageBox.Show("Жоден з елементів не було вибрано");
                 return;
             }
+            // Знаходимо індекс елемента, що був обраний
             int selectedIndex = devices_listView.FocusedItem.Index;
-
+            // Створюємо екзмепляр форми, і передаємо тоді посилання на обраний об'єкт
             DeviceForm deviceEditForm = new DeviceForm(devicesList[selectedIndex]);
-            if(deviceEditForm.ShowDialog() == DialogResult.OK)
+            // Відкриваємо форму
+            if (deviceEditForm.ShowDialog() == DialogResult.OK)
             {
+                // Виводимо нову інформацію
                 LoadListViewData(null);
-                devices_listView.Items[selectedIndex] = new ListViewItem(devicesList[selectedIndex].ToString(), selectedIndex.ToString());
+                needToSave = true;
             }
             else
             {
+                // Виводимо відповідне повідомлення
                 MessageBox.Show("Дані не були збережені");
             }
         }
 
         private void delete_button_Click(object sender, EventArgs e)
         {
+            // Перевіряємо чи обрав користувач елеиент із списку
+            if (devices_listView.FocusedItem == null)
+            {
+                // Виводимо відповідне повідомлення
+                MessageBox.Show("Жоден з елементів не було вибрано");
+                return;
+            }
+            // Знаходимо індекс елемента, що був обраний
             int selectedIndex = devices_listView.FocusedItem.Index;
             DialogResult result = MessageBox.Show("Дійсно бажаєте видалити информацію про девайc?\n\nІнформацію буде не можливо відновити", "Підвтердження дії", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {               
                 devicesList.RemoveAt(selectedIndex);
                 LoadListViewData(null);
+                needToSave = true;
+                // Виводимо відповідне повідомлення
                 MessageBox.Show("Успішо видалено!");
             }
         }
@@ -117,7 +150,8 @@ namespace CourseWork
         private void saveNewDevice(CommunicationDevice deviceInfo)
         {
             devicesList.Add(deviceInfo);
-            LoadListViewData(null);           
+            LoadListViewData(null);
+            needToSave = false;
         }
 
         private void bluetoothDevice_button_Click(object sender, EventArgs e)
@@ -147,6 +181,7 @@ namespace CourseWork
 
         private void search_button_Click(object sender, EventArgs e)
         {   
+            // Зберігаємо усі текстові поля
             string searchBrand = brand_textBox.Text;
             string searchModel = model_textBox.Text;
 
@@ -172,6 +207,7 @@ namespace CourseWork
             {
                searchDataTranmissionRangeMin = double.MinValue;
             }
+
             if(!double.TryParse(dataTranmissionRangeMax_textBox.Text, out searchDataTranmissionRangeMax))
             {
                searchDataTranmissionRangeMax = double.MaxValue;
@@ -274,6 +310,7 @@ namespace CourseWork
                 return;
             }
             MessageBox.Show("Дані були успішно збережені!", "Збереження");
+            needToSave = false;
         }
 
         private void info_button_Click(object sender, EventArgs e)
@@ -414,6 +451,27 @@ namespace CourseWork
                 return true;
             }
             return base.ProcessDialogKey(keyData);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(needToSave)
+            {
+                DialogResult result = MessageBox.Show("У вас є незбережені зміни, бажаєте зберегти їх?", "Збереження змін", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        CommunicationDevice.WriteDevicesToFile("devices.xml", devicesList);
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show("Помилка збереження, спробуйте ще раз", $"{exception.Message}");
+                        return;
+                    }
+                    MessageBox.Show("Дані були успішно збережені!", "Збереження");
+                }
+            }
         }
     }
 }
